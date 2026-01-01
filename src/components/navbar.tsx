@@ -69,7 +69,7 @@ export function Navbar() {
                 {item.isMegaMenu ? (
                   <button
                     className={`text-sm font-medium transition-colors relative group flex items-center gap-1 cursor-default
-                      ${activeMegaMenu === item.label ? "text-brand-cyan" : "text-slate-700 hover:text-cyan-600"}`}
+                      ${activeMegaMenu === item.label ? "text-brand-cyan" : "text-slate-700 hover:text-brand-cyan"}`}
                   >
                     {item.label}
                     <ChevronDown className="w-4 h-4 mt-0.5 group-hover:rotate-180 transition-transform duration-300" />
@@ -81,7 +81,7 @@ export function Navbar() {
                   <Link
                     href={item.href}
                     className={`text-sm font-medium transition-colors relative group flex items-center gap-1
-                      ${pathname === item.href ? "text-brand-cyan" : "text-slate-700 hover:text-cyan-600"}`}
+                      ${pathname === item.href ? "text-brand-cyan" : "text-slate-700 hover:text-brand-cyan"}`}
                   >
                     {item.label}
                     <span className={`absolute -bottom-1 left-0 h-[2px] bg-gradient-to-r from-brand-cyan to-brand-deep transition-all duration-300 
@@ -121,7 +121,7 @@ export function Navbar() {
             ))}
             <Button
               onClick={() => setIsQuoteOpen(true)}
-              className="bg-gradient-to-r from-brand-cyan to-brand-deep text-white border-0 shadow-lg shadow-cyan-500/30 hover:shadow-xl hover:shadow-cyan-500/40 transition-all duration-300 rounded-full px-6 font-semibold"
+              className="bg-gradient-to-r from-brand-cyan to-brand-deep text-white border-0 shadow-lg shadow-brand-cyan/30 hover:shadow-xl hover:shadow-brand-cyan/40 transition-all duration-300 rounded-full px-6 font-semibold"
             >
               Get a Quote
             </Button>
@@ -171,7 +171,7 @@ export function Navbar() {
                 ) : (
                   <Link
                     href={item.href}
-                    className="block text-base sm:text-lg font-medium text-slate-700 hover:text-cyan-600 py-2.5 sm:py-3 min-h-[44px] flex items-center"
+                    className="block text-base sm:text-lg font-medium text-slate-700 hover:text-brand-cyan py-2.5 sm:py-3 min-h-[44px] flex items-center"
                     onClick={() => setIsMenuOpen(false)}
                   >
                     {item.label}
@@ -185,7 +185,7 @@ export function Navbar() {
                   setIsMenuOpen(false)
                   setIsQuoteOpen(true)
                 }}
-                className="w-full bg-gradient-to-r from-brand-cyan to-brand-deep text-white border-0 shadow-lg shadow-cyan-500/30 py-5 sm:py-6 rounded-xl font-bold text-base sm:text-lg min-h-[48px]"
+                className="w-full bg-gradient-to-r from-brand-cyan to-brand-deep text-white border-0 shadow-lg shadow-brand-cyan/30 py-5 sm:py-6 rounded-xl font-bold text-base sm:text-lg min-h-[48px]"
               >
                 Get a Quote
               </Button>

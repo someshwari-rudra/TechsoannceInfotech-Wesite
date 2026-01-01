@@ -182,7 +182,7 @@ function ServiceCard({
             <div className="mt-auto pt-4 flex justify-center">
               <span className="inline-flex items-center text-sm font-bold text-brand-cyan group-hover:text-brand-dark transition-colors duration-300">
                 Discover More
-                <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
+                <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" style={{ stroke: 'url(#icon-gradient)' }} />
               </span>
             </div>
           </div>

@@ -119,9 +119,9 @@ export function WhyChooseUs() {
             <div className="relative z-10">
               {/* Icon with Glow Effect */}
               <div className="relative w-16 h-16 sm:w-18 sm:h-18 mx-auto mb-6">
-                <div className="absolute inset-0 bg-gradient-to-br from-brand-cyan to-blue-500 rounded-2xl blur-xl opacity-50 group-hover:opacity-75 transition-opacity duration-300" />
-                <div className="relative w-full h-full bg-gradient-to-br from-brand-cyan to-blue-500 rounded-2xl flex items-center justify-center backdrop-blur-sm border border-white/20 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300">
-                  <CheckCircle2 className="w-8 h-8 sm:w-9 sm:h-9 text-white" />
+                <div className="absolute inset-0 bg-brand-cyan/20 rounded-2xl blur-xl opacity-50 group-hover:opacity-75 transition-opacity duration-300" />
+                <div className="relative w-full h-full bg-white rounded-2xl flex items-center justify-center backdrop-blur-sm border border-brand-cyan/20 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 shadow-lg">
+                  <CheckCircle2 className="w-8 h-8 sm:w-9 sm:h-9" style={{ stroke: 'url(#icon-gradient)' }} />
                 </div>
               </div>
 

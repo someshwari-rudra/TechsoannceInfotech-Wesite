@@ -61,7 +61,7 @@ export default function AboutPage() {
             className="text-center mb-12"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">{aboutConfig.whoWeAre.title}</h2>
-            <div className="h-1 w-20 bg-brand-cyan mx-auto rounded-full mb-6" />
+            <div className="h-1.5 w-24 bg-gradient-to-r from-brand-cyan to-brand-deep mx-auto rounded-full mb-6" />
             <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
               {aboutConfig.whoWeAre.content}
             </p>
@@ -86,7 +86,7 @@ export default function AboutPage() {
             className="text-center mb-12"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">{aboutConfig.whatWeDo.title}</h2>
-            <div className="h-1 w-20 bg-brand-cyan mx-auto rounded-full mb-6" />
+            <div className="h-1.5 w-24 bg-gradient-to-r from-brand-cyan to-brand-deep mx-auto rounded-full mb-6" />
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
               {aboutConfig.whatWeDo.description}
             </p>
@@ -117,7 +117,7 @@ export default function AboutPage() {
             className="text-center mb-12"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">{aboutConfig.howWeWork.title}</h2>
-            <div className="h-1 w-20 bg-brand-cyan mx-auto rounded-full mb-4" />
+            <div className="h-1.5 w-24 bg-gradient-to-r from-brand-cyan to-brand-deep mx-auto rounded-full mb-4" />
             <p className="text-gray-600 italic">{aboutConfig.howWeWork.microcopy}</p>
           </motion.div>
 
@@ -252,11 +252,11 @@ export default function AboutPage() {
                 className="group relative p-1"
               >
                 <div className="absolute inset-0 bg-gradient-to-br from-brand-cyan/20 via-transparent to-brand-deep/20 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-sm" />
-                <div className="relative h-full bg-white border border-slate-100 p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-                  <div className="w-12 h-12 bg-slate-50 rounded-xl flex items-center justify-center mb-6 group-hover:bg-brand-cyan/10 transition-colors duration-300">
-                    <item.icon className="w-6 h-6 text-slate-600 group-hover:text-brand-cyan transition-colors duration-300" />
+                <div className="relative h-full bg-white border border-gray-200 p-8 rounded-2xl shadow-sm hover:border-brand-cyan/50 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                  <div className="w-12 h-12 bg-gradient-to-br from-brand-cyan/10 to-brand-cyan/5 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                    <item.icon className="w-6 h-6 text-brand-cyan" style={{ stroke: 'url(#icon-gradient)' }} />
                   </div>
-                  <h3 className="text-lg font-bold text-slate-800 group-hover:text-brand-dark transition-colors duration-300">
+                  <h3 className="text-lg font-bold text-slate-800 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-brand-cyan group-hover:to-brand-deep transition-all duration-300">
                     {item.text}
                   </h3>
                 </div>
@@ -298,7 +298,7 @@ export default function AboutPage() {
             </h2>
 
             <Link href={aboutConfig.finalCTA.href}>
-              <Button className="px-10 py-6 bg-gradient-to-r from-brand-cyan to-brand-deep hover:scale-105 transition-all duration-300 shadow-lg shadow-cyan-500/20 text-white font-semibold text-lg rounded-lg">
+              <Button className="px-10 py-6 bg-gradient-to-r from-brand-cyan to-brand-deep hover:scale-105 transition-all duration-300 shadow-lg shadow-brand-cyan/20 text-white font-semibold text-lg rounded-lg">
                 {aboutConfig.finalCTA.buttonText}
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Button>
@@ -325,15 +325,15 @@ function TraitCard({ icon: Icon, title, delay }: { icon: any, title: string, del
       transition={{ delay: delay * 0.1, duration: 0.5 }}
       className="group cursor-default h-full"
     >
-      <div className="h-full p-6 rounded-2xl bg-white/50 backdrop-blur-md border border-white/40 shadow-xl shadow-slate-900/10 hover:shadow-2xl hover:shadow-slate-900/15 hover:bg-white/70 transition-all duration-300 hover:scale-105 hover:-translate-y-1 flex flex-col items-center text-center">
+      <div className="h-full p-6 rounded-2xl bg-white/50 backdrop-blur-md border border-white/40 shadow-xl shadow-slate-900/10 hover:shadow-2xl hover:shadow-slate-900/15 hover:bg-white/70 hover:border-brand-cyan/50 transition-all duration-300 hover:scale-105 hover:-translate-y-1 flex flex-col items-center text-center">
         {/* Icon with gradient background */}
         <div className="mb-4 flex justify-center">
-          <div className="p-3 rounded-xl bg-gradient-to-br from-cyan-400/20 to-brand-deep/20 group-hover:from-cyan-400/30 group-hover:to-brand-deep/30 transition-all duration-300">
-            <Icon className="w-8 h-8 text-brand-cyan" />
+          <div className="w-14 h-14 bg-gradient-to-br from-brand-cyan/10 to-brand-cyan/5 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+            <Icon className="w-8 h-8 text-brand-cyan" style={{ stroke: 'url(#icon-gradient)' }} />
           </div>
         </div>
 
-        <h4 className="text-gray-900 font-bold text-base leading-tight bg-clip-text text-transparent bg-gradient-to-r from-brand-cyan to-brand-deep transition-all duration-300">
+        <h4 className="text-gray-900 font-bold text-base leading-tight group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-brand-cyan group-hover:to-brand-deep transition-all duration-300">
           {title}
         </h4>
       </div>
@@ -352,10 +352,10 @@ function ServiceCard({ icon: Icon, title, description, delay }: { icon: any, tit
       className="group"
     >
       <div className="bg-white p-6 rounded-xl border border-gray-200 hover:border-brand-cyan/50 hover:shadow-xl transition-all duration-300 h-full">
-        <div className="w-12 h-12 bg-gradient-to-br from-brand-cyan/10 to-cyan-50 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
-          <Icon className="w-6 h-6 text-brand-cyan" />
+        <div className="w-12 h-12 bg-gradient-to-br from-brand-cyan/10 to-brand-cyan/5 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+          <Icon className="w-6 h-6 text-brand-cyan" style={{ stroke: 'url(#icon-gradient)' }} />
         </div>
-        <h3 className="text-lg font-bold text-gray-900 mb-2">{title}</h3>
+        <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-brand-cyan group-hover:to-brand-deep transition-all duration-300">{title}</h3>
         <p className="text-gray-600 text-sm leading-relaxed">{description}</p>
       </div>
     </motion.div>
@@ -372,16 +372,16 @@ function ProcessStep({ number, title, description, isLast, delay }: { number: nu
       transition={{ duration: 0.4, delay }}
       className="relative"
     >
-      <div className="flex flex-col items-center text-center">
-        <div className="w-14 h-14 bg-brand-cyan text-white rounded-full flex items-center justify-center font-bold text-xl mb-4 shadow-lg">
+      <div className="group flex flex-col items-center text-center p-4 rounded-2xl transition-all duration-300 hover:bg-white/50 hover:shadow-lg hover:-translate-y-1">
+        <div className="w-14 h-14 bg-gradient-to-br from-brand-cyan to-brand-deep text-white rounded-full flex items-center justify-center font-bold text-xl mb-4 shadow-lg shadow-brand-cyan/20 group-hover:scale-110 transition-transform duration-300">
           {number}
         </div>
-        <h3 className="font-bold text-gray-900 mb-2 text-sm md:text-base">{title}</h3>
+        <h3 className="font-bold text-gray-900 mb-2 text-sm md:text-base group-hover:text-brand-cyan transition-colors duration-300">{title}</h3>
         <p className="text-gray-600 text-xs md:text-sm">{description}</p>
       </div>
 
       {!isLast && (
-        <div className="hidden md:block absolute top-7 left-[60%] w-[80%] h-0.5 bg-gradient-to-r from-brand-cyan to-cyan-200" />
+        <div className="hidden md:block absolute top-11 left-[60%] w-[80%] h-0.5 bg-gradient-to-r from-brand-cyan to-brand-deep/30 opacity-30" />
       )}
     </motion.div>
   )

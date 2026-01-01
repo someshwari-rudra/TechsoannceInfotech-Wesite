@@ -98,8 +98,8 @@ export function WebDevLayout({ service }: { service: ServiceData }) {
               {/* Floating Badge */}
               <div className="absolute -bottom-6 -right-6 bg-white p-4 rounded-xl shadow-xl border border-slate-100 animate-bounce-slow">
                 <div className="flex items-center gap-3">
-                  <div className="bg-green-100 p-2 rounded-lg text-green-600">
-                    <Zap className="w-5 h-5" />
+                  <div className="bg-white p-2 rounded-lg border border-brand-cyan/20 shadow-sm">
+                    <Zap className="w-5 h-5" style={{ stroke: 'url(#icon-gradient)' }} />
                   </div>
                   <div>
                     <div className="text-xs text-slate-500 font-bold uppercase">
@@ -126,8 +126,8 @@ export function WebDevLayout({ service }: { service: ServiceData }) {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 {service.features.map((feature, idx) => (
                   <div key={idx} className="flex gap-4">
-                    <div className="mt-1 flex-shrink-0 w-10 h-10 rounded-lg bg-blue-50 flex items-center justify-center text-blue-600">
-                      <feature.icon className="w-5 h-5" />
+                    <div className="mt-1 flex-shrink-0 w-10 h-10 rounded-lg bg-white border border-brand-cyan/20 flex items-center justify-center shadow-sm">
+                      <feature.icon className="w-5 h-5" style={{ stroke: 'url(#icon-gradient)' }} />
                     </div>
                     <div>
                       <h4 className="font-bold text-[#0A1A2F] mb-1">

@@ -28,30 +28,30 @@ export function EcommerceLayout({ service }: { service: ServiceData }) {
 
                     <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
                         <div className="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100 group">
-                            <div className="w-14 h-14 bg-cyan-50 rounded-full flex items-center justify-center text-brand-cyan mb-6 group-hover:scale-110 transition-transform">
-                                <FeatureIcon1 className="w-6 h-6" />
+                            <div className="w-14 h-14 bg-white border border-brand-cyan/20 rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform shadow-sm">
+                                <FeatureIcon1 className="w-6 h-6" style={{ stroke: 'url(#icon-gradient)' }} />
                             </div>
                             <h3 className="text-lg font-bold mb-3 text-[#0A1A2F]">{service.features[0].title}</h3>
                             <p className="text-sm text-slate-500 leading-relaxed">{service.features[0].description}</p>
                         </div>
                         {/* Repeat manual mapping to ensure no errors with loop variables */}
                         <div className="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100 group">
-                            <div className="w-14 h-14 bg-blue-50 rounded-full flex items-center justify-center text-blue-600 mb-6 group-hover:scale-110 transition-transform">
-                                <FeatureIcon2 className="w-6 h-6" />
+                            <div className="w-14 h-14 bg-white border border-brand-cyan/20 rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform shadow-sm">
+                                <FeatureIcon2 className="w-6 h-6" style={{ stroke: 'url(#icon-gradient)' }} />
                             </div>
                             <h3 className="text-lg font-bold mb-3 text-[#0A1A2F]">{service.features[1].title}</h3>
                             <p className="text-sm text-slate-500 leading-relaxed">{service.features[1].description}</p>
                         </div>
                         <div className="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100 group">
-                            <div className="w-14 h-14 bg-slate-100 rounded-full flex items-center justify-center text-slate-600 mb-6 group-hover:scale-110 transition-transform">
-                                <FeatureIcon3 className="w-6 h-6" />
+                            <div className="w-14 h-14 bg-white border border-brand-cyan/20 rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform shadow-sm">
+                                <FeatureIcon3 className="w-6 h-6" style={{ stroke: 'url(#icon-gradient)' }} />
                             </div>
                             <h3 className="text-lg font-bold mb-3 text-[#0A1A2F]">{service.features[2].title}</h3>
                             <p className="text-sm text-slate-500 leading-relaxed">{service.features[2].description}</p>
                         </div>
                         <div className="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100 group">
-                            <div className="w-14 h-14 bg-emerald-50 rounded-full flex items-center justify-center text-emerald-600 mb-6 group-hover:scale-110 transition-transform">
-                                <FeatureIcon4 className="w-6 h-6" />
+                            <div className="w-14 h-14 bg-white border border-brand-cyan/20 rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform shadow-sm">
+                                <FeatureIcon4 className="w-6 h-6" style={{ stroke: 'url(#icon-gradient)' }} />
                             </div>
                             <h3 className="text-lg font-bold mb-3 text-[#0A1A2F]">{service.features[3].title}</h3>
                             <p className="text-sm text-slate-500 leading-relaxed">{service.features[3].description}</p>

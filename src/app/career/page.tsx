@@ -85,7 +85,7 @@ export default function CareerPage() {
           <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10 mix-blend-overlay" />
         </div>
         <div className="absolute top-20 right-10 w-96 h-96 bg-brand-cyan/20 rounded-full blur-3xl z-0" />
-        <div className="absolute bottom-10 left-10 w-80 h-80 bg-cyan-200/10 rounded-full blur-3xl z-0" />
+        <div className="absolute bottom-10 left-10 w-80 h-80 bg-brand-cyan/5 rounded-full blur-3xl z-0" />
 
         <div className="container mx-auto px-4 md:px-6 max-w-5xl relative z-10">
           <motion.div
@@ -112,7 +112,7 @@ export default function CareerPage() {
 
             <div className="flex flex-wrap gap-4 justify-center">
               <a href={careerConfig.hero.primaryCTA.href}>
-                <Button className="px-8 py-6 bg-gradient-to-r from-brand-cyan to-brand-deep hover:scale-105 transition-all duration-300 shadow-lg shadow-cyan-500/20 text-white font-semibold text-lg rounded-lg">
+                <Button className="px-8 py-6 bg-gradient-to-r from-brand-cyan to-brand-deep hover:scale-105 transition-all duration-300 shadow-lg shadow-brand-cyan/20 text-white font-semibold text-lg rounded-lg">
                   {careerConfig.hero.primaryCTA.text}
                 </Button>
               </a>
@@ -136,7 +136,7 @@ export default function CareerPage() {
             className="text-center mb-12"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">{careerConfig.whyWorkWithUs.title}</h2>
-            <div className="h-1 w-20 bg-brand-cyan mx-auto rounded-full" />
+            <div className="h-1.5 w-24 bg-gradient-to-r from-brand-cyan to-brand-deep mx-auto rounded-full" />
           </motion.div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 md:gap-6">
@@ -152,7 +152,7 @@ export default function CareerPage() {
         <div className="container mx-auto px-4 md:px-6 max-w-7xl">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">{careerConfig.lifeAtCompany.title}</h2>
-            <div className="h-1 w-20 bg-brand-cyan mx-auto rounded-full mb-6" />
+            <div className="h-1.5 w-24 bg-gradient-to-r from-brand-cyan to-brand-deep mx-auto rounded-full mb-6" />
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
               {careerConfig.lifeAtCompany.description}
             </p>
@@ -182,7 +182,7 @@ export default function CareerPage() {
             className="text-center mb-12"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Open Positions</h2>
-            <div className="h-1 w-20 bg-brand-cyan mx-auto rounded-full" />
+            <div className="h-1.5 w-24 bg-gradient-to-r from-brand-cyan to-brand-deep mx-auto rounded-full" />
           </motion.div>
 
           <div className="grid grid-cols-1 gap-6">
@@ -201,7 +201,7 @@ export default function CareerPage() {
       </section>
 
       {/* Hiring Process */}
-      <section className="py-16 bg-gradient-to-br from-gray-50 to-cyan-50/30">
+      <section className="py-16 bg-gradient-to-br from-gray-50 to-brand-cyan/5">
         <div className="container mx-auto px-4 md:px-6 max-w-6xl">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -210,7 +210,7 @@ export default function CareerPage() {
             className="text-center mb-12"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">{careerConfig.hiringProcess.title}</h2>
-            <div className="h-1 w-20 bg-brand-cyan mx-auto rounded-full mb-4" />
+            <div className="h-1.5 w-24 bg-gradient-to-r from-brand-cyan to-brand-deep mx-auto rounded-full mb-4" />
             <p className="text-gray-600">{careerConfig.hiringProcess.subtitle}</p>
           </motion.div>
 
@@ -297,7 +297,7 @@ export default function CareerPage() {
                     </label>
 
                     {!selectedFile ? (
-                      <label className="flex items-center justify-center gap-2 h-12 px-4 border-2 border-dashed border-gray-300 rounded-lg cursor-pointer hover:border-brand-cyan hover:bg-cyan-50/50 transition-colors">
+                      <label className="flex items-center justify-center gap-2 h-12 px-4 border-2 border-dashed border-gray-300 rounded-lg cursor-pointer hover:border-brand-cyan hover:bg-brand-cyan/5 transition-colors">
                         <Upload className="w-5 h-5 text-gray-400" />
                         <span className="text-sm text-gray-600">Choose PDF file (max 5MB)</span>
                         <input
@@ -352,7 +352,7 @@ export default function CareerPage() {
 
                   <Button
                     disabled={isPending}
-                    className="w-full h-14 bg-gradient-to-r from-brand-cyan to-brand-deep hover:scale-105 transition-all duration-300 shadow-md shadow-cyan-500/20 text-white font-semibold text-lg rounded-lg"
+                    className="w-full h-14 bg-gradient-to-r from-brand-cyan to-brand-deep hover:scale-105 transition-all duration-300 shadow-md shadow-brand-cyan/20 text-white font-semibold text-lg rounded-lg"
                   >
                     {isPending ? (
                       <>
@@ -383,7 +383,7 @@ export default function CareerPage() {
             </h2>
 
             <a href={careerConfig.finalCTA.href}>
-              <Button className="px-10 py-6 bg-gradient-to-r from-brand-cyan to-brand-deep hover:scale-105 transition-all duration-300 shadow-lg shadow-cyan-500/20 text-white font-semibold text-lg rounded-lg">
+              <Button className="px-10 py-6 bg-gradient-to-r from-brand-cyan to-brand-deep hover:scale-105 transition-all duration-300 shadow-lg shadow-brand-cyan/20 text-white font-semibold text-lg rounded-lg">
                 {careerConfig.finalCTA.buttonText}
               </Button>
             </a>
@@ -405,13 +405,13 @@ function WhyCard({ icon: Icon, title }: { icon: any, title: string }) {
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
-      className="flex items-start gap-4 p-6 rounded-xl bg-gradient-to-br from-white to-cyan-50/30 border border-gray-100 hover:border-brand-cyan/30 hover:shadow-lg transition-all duration-300"
+      className="group flex items-start gap-4 p-6 rounded-xl bg-white border border-gray-200 shadow-sm hover:border-brand-cyan/50 hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
     >
-      <div className="w-12 h-12 bg-brand-cyan/10 rounded-lg flex items-center justify-center flex-shrink-0">
-        <Icon className="w-6 h-6 text-brand-cyan" />
+      <div className="w-12 h-12 bg-gradient-to-br from-brand-cyan/10 to-brand-cyan/5 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+        <Icon className="w-6 h-6 text-brand-cyan" style={{ stroke: 'url(#icon-gradient)' }} />
       </div>
-      <div className="flex-1">
-        <p className="text-gray-700 font-medium leading-relaxed">{title}</p>
+      <div className="flex-1 flex items-center min-h-[48px]">
+        <p className="text-gray-700 font-bold leading-tight group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-brand-cyan group-hover:to-brand-deep transition-all duration-300">{title}</p>
       </div>
     </motion.div>
   )
@@ -423,37 +423,38 @@ function JobCard({ job, onApply }: { job: any, onApply: () => void }) {
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
-      className="bg-white p-6 md:p-8 rounded-xl border border-gray-200 hover:border-brand-cyan/50 hover:shadow-xl transition-all duration-300"
+      className="group bg-white p-6 md:p-8 rounded-xl border border-gray-200 hover:border-brand-cyan/50 hover:shadow-xl hover:shadow-brand-cyan/5 transition-all duration-300"
     >
       <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4 mb-4">
         <div>
-          <h3 className="text-2xl font-bold text-gray-900 mb-2">{job.title}</h3>
+          <h3 className="text-2xl font-bold text-gray-900 mb-2 group-hover:text-brand-cyan transition-colors duration-300">{job.title}</h3>
           <div className="flex flex-wrap gap-3 text-sm text-gray-600">
-            <span className="flex items-center gap-1">
-              <Briefcase className="w-4 h-4" />
+            <span className="flex items-center gap-1.5">
+              <Briefcase className="w-4 h-4 text-brand-cyan" />
               {job.experience}
             </span>
-            <span className="flex items-center gap-1">
-              <Home className="w-4 h-4" />
+            <span className="flex items-center gap-1.5">
+              <Home className="w-4 h-4 text-brand-cyan" />
               {job.location}
             </span>
-            <span className="px-3 py-1 bg-green-50 text-green-700 rounded-full font-medium">
+            <span className="px-3 py-1 bg-gradient-to-r from-brand-cyan to-brand-deep text-white rounded-full font-medium shadow-sm shadow-brand-cyan/20 text-xs tracking-wide">
               {job.type}
             </span>
           </div>
         </div>
         <Button
-          className="bg-gradient-to-r from-brand-cyan to-brand-deep hover:scale-105 transition-all duration-300 shadow-md shadow-cyan-500/20 text-white font-semibold px-6 py-3 rounded-lg whitespace-nowrap"
+          onClick={onApply}
+          className="bg-gradient-to-r from-brand-cyan to-brand-deep hover:scale-105 transition-all duration-300 shadow-md shadow-brand-cyan/20 text-white font-semibold px-6 py-3 rounded-lg whitespace-nowrap"
         >
           Apply Now
         </Button>
       </div>
 
-      <p className="text-gray-600 mb-4">{job.description}</p>
+      <p className="text-gray-600 mb-6 leading-relaxed">{job.description}</p>
 
       <div className="flex flex-wrap gap-2">
         {job.techStack.map((tech: string) => (
-          <span key={tech} className="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm font-medium">
+          <span key={tech} className="px-3 py-1.5 bg-brand-cyan/5 text-slate-700 rounded-lg text-sm font-medium border border-brand-cyan/10 hover:border-brand-cyan/50 hover:text-brand-cyan hover:bg-brand-cyan/10 transition-colors duration-300 cursor-default">
             {tech}
           </span>
         ))}
@@ -469,16 +470,16 @@ function HiringStep({ number, title, description, isLast }: any) {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ delay: number * 0.1 }}
-      className="relative flex flex-col items-center text-center"
+      className="relative group flex flex-col items-center text-center p-4 rounded-2xl transition-all duration-300 hover:bg-white/50 hover:shadow-lg hover:-translate-y-1"
     >
-      <div className="w-16 h-16 bg-brand-cyan rounded-full flex items-center justify-center text-white font-bold text-xl mb-4 shadow-lg">
+      <div className="w-16 h-16 bg-gradient-to-br from-brand-cyan to-brand-deep text-white rounded-full flex items-center justify-center font-bold text-xl mb-4 shadow-lg shadow-brand-cyan/20 group-hover:scale-110 transition-transform duration-300">
         {number}
       </div>
-      <h4 className="font-bold text-gray-900 mb-2">{title}</h4>
+      <h4 className="font-bold text-gray-900 mb-2 group-hover:text-brand-cyan transition-colors duration-300">{title}</h4>
       <p className="text-sm text-gray-600">{description}</p>
 
       {!isLast && (
-        <ArrowRight className="hidden md:block absolute top-8 -right-8 w-6 h-6 text-brand-cyan/30" />
+        <div className="hidden md:block absolute top-[3.5rem] left-[65%] w-[70%] h-0.5 bg-gradient-to-r from-brand-cyan to-brand-deep/30 opacity-30" />
       )}
     </motion.div>
   )
@@ -494,8 +495,8 @@ function BenefitCard({ icon: Icon, title, delay }: { icon: any, title: string, d
       className="group"
     >
       <div className="bg-white p-6 rounded-xl border border-gray-200 hover:border-brand-cyan/50 hover:shadow-xl transition-all duration-300 h-full flex flex-col items-center text-center">
-        <div className="w-14 h-14 bg-gradient-to-br from-brand-cyan/10 to-cyan-50 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
-          <Icon className="w-7 h-7 text-brand-cyan" />
+        <div className="w-14 h-14 bg-gradient-to-br from-brand-cyan/10 to-brand-cyan/5 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+          <Icon className="w-7 h-7" style={{ stroke: 'url(#icon-gradient)' }} />
         </div>
         <h4 className="text-gray-900 font-semibold text-sm leading-tight group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-brand-cyan group-hover:to-brand-deep transition-all duration-300">{title}</h4>
       </div>

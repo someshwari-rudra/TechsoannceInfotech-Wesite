@@ -60,7 +60,7 @@ export default function ContactPage() {
 
             <div className="flex flex-wrap gap-4 justify-center">
               <a href={contactConfig.hero.primaryCTA.href}>
-                <Button className="px-8 py-6 bg-gradient-to-r from-brand-cyan to-brand-deep hover:scale-105 transition-all duration-300 shadow-lg shadow-cyan-500/20 text-white font-semibold text-lg rounded-lg">
+                <Button className="px-8 py-6 bg-gradient-to-r from-brand-cyan to-brand-deep hover:scale-105 transition-all duration-300 shadow-lg shadow-brand-cyan/20 text-white font-semibold text-lg rounded-lg">
                   {contactConfig.hero.primaryCTA.text}
                 </Button>
               </a>
@@ -87,7 +87,7 @@ export default function ContactPage() {
               id="contact-form"
             >
               <div className="bg-white p-6 sm:p-8 md:p-10 rounded-2xl shadow-xl">
-                <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3">{contactConfig.form.title}</h2>
+                <h2 className="text-2xl sm:text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-brand-cyan to-brand-deep mb-3">{contactConfig.form.title}</h2>
                 <p className="text-gray-600 mb-6 sm:mb-8">
                   {contactConfig.form.description}
                 </p>
@@ -193,7 +193,7 @@ export default function ContactPage() {
 
                     <Button
                       disabled={isPending}
-                      className="w-full h-14 bg-gradient-to-r from-brand-cyan to-brand-deep hover:scale-105 transition-all duration-300 shadow-md shadow-cyan-500/20 text-white font-semibold text-lg rounded-lg"
+                      className="w-full h-14 bg-gradient-to-r from-brand-cyan to-brand-deep hover:scale-105 transition-all duration-300 shadow-md shadow-brand-cyan/20 text-white font-semibold text-lg rounded-lg"
                     >
                       {isPending ? (
                         <>
@@ -223,7 +223,7 @@ export default function ContactPage() {
             >
               {/* Alternative Contact Options */}
               <div className="bg-white p-6 sm:p-8 rounded-2xl shadow-lg">
-                <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4 sm:mb-6">{contactConfig.contactOptions.title}</h3>
+                <h3 className="text-xl sm:text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-brand-cyan to-brand-deep mb-4 sm:mb-6">{contactConfig.contactOptions.title}</h3>
 
                 <div className="space-y-5">
                   {contactConfig.contactOptions.options.map((option, index) => (
@@ -239,8 +239,8 @@ export default function ContactPage() {
               </div>
 
               {/* Why Contact Us */}
-              <div className="bg-gradient-to-br from-brand-cyan/5 to-cyan-50/50 p-6 sm:p-8 rounded-2xl border border-brand-cyan/20">
-                <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4 sm:mb-6">{contactConfig.whyChooseUs.title}</h3>
+              <div className="bg-white p-6 sm:p-8 rounded-2xl shadow-lg border border-gray-200">
+                <h3 className="text-xl sm:text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-brand-cyan to-brand-deep mb-4 sm:mb-6">{contactConfig.whyChooseUs.title}</h3>
 
                 <div className="space-y-4">
                   {contactConfig.whyChooseUs.points.map((point, index) => (
@@ -267,7 +267,7 @@ export default function ContactPage() {
             </h2>
 
             <a href={contactConfig.finalCTA.href}>
-              <Button className="px-10 py-6 bg-gradient-to-r from-brand-cyan to-brand-deep hover:scale-105 transition-all duration-300 shadow-lg shadow-cyan-500/20 text-white font-semibold text-lg rounded-lg">
+              <Button className="px-10 py-6 bg-gradient-to-r from-brand-cyan to-brand-deep hover:scale-105 transition-all duration-300 shadow-lg shadow-brand-cyan/20 text-white font-semibold text-lg rounded-lg">
                 {contactConfig.finalCTA.buttonText}
               </Button>
             </a>
@@ -287,7 +287,7 @@ function ContactOption({ icon: Icon, title, value, href }: { icon: any, title: s
   const content = (
     <div className="flex items-start gap-4 p-4 rounded-lg hover:bg-gray-50 transition-colors">
       <div className="w-12 h-12 bg-brand-cyan/10 rounded-full flex items-center justify-center flex-shrink-0">
-        <Icon className="w-6 h-6 text-brand-cyan" />
+        <Icon className="w-6 h-6" style={{ stroke: 'url(#icon-gradient)' }} />
       </div>
       <div className="flex-1 text-left">
         <p className="font-semibold text-gray-900 mb-1">{title}</p>
@@ -305,11 +305,11 @@ function ContactOption({ icon: Icon, title, value, href }: { icon: any, title: s
 
 function WhyItem({ text }: { text: string }) {
   return (
-    <div className="flex items-center gap-3">
-      <div className="w-6 h-6 rounded-full bg-brand-cyan flex items-center justify-center flex-shrink-0">
-        <CheckCircle2 className="w-4 h-4 text-white" />
+    <div className="flex items-center gap-4 group p-3 rounded-lg hover:bg-brand-cyan/5 transition-colors duration-300">
+      <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-brand-cyan/10 to-brand-cyan/5 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+        <CheckCircle2 className="w-5 h-5 text-brand-cyan" style={{ stroke: 'url(#icon-gradient)' }} />
       </div>
-      <span className="text-gray-700 font-medium">{text}</span>
+      <span className="text-gray-700 font-medium group-hover:text-brand-cyan transition-colors duration-300">{text}</span>
     </div>
   )
 }

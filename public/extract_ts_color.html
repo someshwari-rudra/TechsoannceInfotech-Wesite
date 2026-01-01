@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <img id="img" src="/ref_image.png" style="display:none;" />
+    <canvas id="canvas"></canvas>
+    <div id="hex"></div>
+    <script>
+        window.onload = function () {
+            var img = document.getElementById('img');
+            var canvas = document.getElementById('canvas');
+            var ctx = canvas.getContext('2d');
+            canvas.width = img.width;
+            canvas.height = img.height;
+            ctx.drawImage(img, 0, 0);
+
+            // access pixel data
+            var imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+            var data = imageData.data;
+
+            // Target the specific cyan/teal used in the cards
+            // Filter out:
+            // - White backgrounds (>240)
+            // - Dark text (<50)
+            // - Grays (where r~g~b)
+
+            var rSum = 0, gSum = 0, bSum = 0, count = 0;
+
+            for (var i = 0, n = data.length; i < n; i += 4) {
+                var r = data[i];
+                var g = data[i + 1];
+                var b = data[i + 2];
+                var alpha = data[i + 3];
+
+                if (alpha < 200) continue;
+
+                // Skip bright whites/light grays (bg)
+                if (r > 200 && g > 200 && b > 200) continue;
+
+                // Skip dark text
+                if (r < 50 && g < 50 && b < 50) continue;
+
+                // Looking for the Cyan/Teal tone
+                // Typically G and B will be higher than R
+                if (b > r + 20 && g > r + 10) {
+                    rSum += r;
+                    gSum += g;
+                    bSum += b;
+                    count++;
+                }
+            }
+
+            if (count > 0) {
+                r = Math.floor(rSum / count);
+                g = Math.floor(gSum / count);
+                b = Math.floor(bSum / count);
+                var hex = "#" + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1);
+                document.getElementById('hex').innerText = hex.toUpperCase();
+            } else {
+                document.getElementById('hex').innerText = "NO_COLOR_FOUND";
+            }
+        };
+    </script>
+</body>
+
+</html>

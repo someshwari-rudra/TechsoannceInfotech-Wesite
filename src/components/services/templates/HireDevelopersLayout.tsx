@@ -101,7 +101,7 @@ export function HireDevelopersLayout({ service }: { service: ServiceData }) {
 
                             {/* Floaters */}
                             <div className="absolute -bottom-4 -left-4 bg-white p-4 rounded-xl shadow-lg border border-slate-100 z-20 flex items-center gap-3 animate-bounce-slow">
-                                <Shield className="w-8 h-8 text-blue-600" />
+                                <Shield className="w-8 h-8" style={{ stroke: 'url(#icon-gradient)' }} />
                                 <div>
                                     <div className="font-bold bg-clip-text text-transparent bg-gradient-to-r from-brand-cyan to-brand-deep">Top 1%</div>
                                     <div className="text-xs text-slate-500">Vetted Talent</div>
@@ -121,9 +121,9 @@ export function HireDevelopersLayout({ service }: { service: ServiceData }) {
                     </div>
 
                     <div className="grid md:grid-cols-2 gap-8">
-                        <div className="flex gap-6 p-6 rounded-2xl hover:bg-slate-50 transition-colors border border-transparent hover:border-slate-100 group">
-                            <div className="w-14 h-14 bg-indigo-50 rounded-2xl flex items-center justify-center text-indigo-600 shrink-0 group-hover:bg-indigo-600 group-hover:text-white transition-colors">
-                                <FeatureIcon1 className="w-6 h-6" />
+                        <div className="flex gap-6 p-6 rounded-2xl hover:bg-slate-50 transition-colors border border-transparent hover:border-brand-cyan/20 group hover:shadow-lg">
+                            <div className="w-14 h-14 bg-white border border-brand-cyan/20 rounded-2xl flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform shadow-sm">
+                                <FeatureIcon1 className="w-6 h-6" style={{ stroke: 'url(#icon-gradient)' }} />
                             </div>
                             <div>
                                 <h3 className="font-bold text-xl text-slate-900 mb-2">{service.features[0].title}</h3>
@@ -131,9 +131,9 @@ export function HireDevelopersLayout({ service }: { service: ServiceData }) {
                             </div>
                         </div>
 
-                        <div className="flex gap-6 p-6 rounded-2xl hover:bg-slate-50 transition-colors border border-transparent hover:border-slate-100 group">
-                            <div className="w-14 h-14 bg-blue-50 rounded-2xl flex items-center justify-center text-blue-600 shrink-0 group-hover:bg-blue-600 group-hover:text-white transition-colors">
-                                <FeatureIcon2 className="w-6 h-6" />
+                        <div className="flex gap-6 p-6 rounded-2xl hover:bg-slate-50 transition-colors border border-transparent hover:border-brand-cyan/20 group hover:shadow-lg">
+                            <div className="w-14 h-14 bg-white border border-brand-cyan/20 rounded-2xl flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform shadow-sm">
+                                <FeatureIcon2 className="w-6 h-6" style={{ stroke: 'url(#icon-gradient)' }} />
                             </div>
                             <div>
                                 <h3 className="font-bold text-xl text-slate-900 mb-2">{service.features[1].title}</h3>
@@ -141,9 +141,9 @@ export function HireDevelopersLayout({ service }: { service: ServiceData }) {
                             </div>
                         </div>
 
-                        <div className="flex gap-6 p-6 rounded-2xl hover:bg-slate-50 transition-colors border border-transparent hover:border-slate-100 group">
-                            <div className="w-14 h-14 bg-cyan-50 rounded-2xl flex items-center justify-center text-cyan-600 shrink-0 group-hover:bg-cyan-600 group-hover:text-white transition-colors">
-                                <FeatureIcon3 className="w-6 h-6" />
+                        <div className="flex gap-6 p-6 rounded-2xl hover:bg-slate-50 transition-colors border border-transparent hover:border-brand-cyan/20 group hover:shadow-lg">
+                            <div className="w-14 h-14 bg-white border border-brand-cyan/20 rounded-2xl flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform shadow-sm">
+                                <FeatureIcon3 className="w-6 h-6" style={{ stroke: 'url(#icon-gradient)' }} />
                             </div>
                             <div>
                                 <h3 className="font-bold text-xl text-slate-900 mb-2">{service.features[2].title}</h3>

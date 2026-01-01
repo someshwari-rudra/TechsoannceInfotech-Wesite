@@ -61,7 +61,7 @@ export function DataAnalyticsHero({ shortDescription }: DataAnalyticsHeroProps) 
                   variants={staggerContainer}
                >
                   <motion.div variants={fadeInUp} className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-cyan-50 text-brand-cyan text-xs font-bold uppercase mb-8 border border-cyan-100">
-                     <BarChart3 className="w-4 h-4" />
+                     <BarChart3 className="w-4 h-4" style={{ stroke: 'url(#icon-gradient)' }} />
                      Data Intelligence
                   </motion.div>
                   <motion.h1 variants={fadeInUp} className="text-4xl md:text-6xl font-bold text-slate-900 mb-6 leading-tight">
@@ -133,8 +133,8 @@ export function DataAnalyticsHero({ shortDescription }: DataAnalyticsHeroProps) 
                      whileHover={{ scale: 1.05 }}
                      className="absolute bottom-20 left-0 bg-[#0A1A2F] text-white p-6 rounded-3xl shadow-2xl shadow-blue-900/30 z-30 flex items-center gap-4"
                   >
-                     <div className="bg-white/10 p-3 rounded-xl">
-                        <Database className="w-6 h-6 text-brand-cyan" />
+                     <div className="bg-white/10 p-3 rounded-xl border border-brand-cyan/30">
+                        <Database className="w-6 h-6" style={{ stroke: 'url(#icon-gradient)' }} />
                      </div>
                      <div>
                         <div className="font-bold">Real-time Sync</div>
