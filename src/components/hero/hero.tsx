@@ -59,7 +59,7 @@ export function Hero() {
             </button>
             <button
               onClick={scrollToConsultancy}
-              className="w-full sm:w-auto px-6 md:px-8 py-3 md:py-4 bg-white/10 backdrop-blur-md border border-white/20 text-slate-800 font-bold rounded-full hover:bg-white/20 transition-all duration-300 flex items-center justify-center gap-2 touch-target"
+              className="w-full sm:w-auto px-6 md:px-8 py-3 md:py-4 bg-white/10 backdrop-blur-md border-2 border-white/30 text-slate-800 font-bold rounded-full hover:bg-gradient-to-r hover:from-brand-cyan/20 hover:to-brand-deep/20 hover:border-brand-cyan/50 transition-all duration-300 flex items-center justify-center gap-2 touch-target"
             >
               <span className="text-sm md:text-base">Schedule a free call</span>
             </button>
