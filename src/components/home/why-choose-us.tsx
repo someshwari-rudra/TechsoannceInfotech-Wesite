@@ -53,7 +53,7 @@ export function WhyChooseUs() {
 
       {/* Animated Gradient Blobs */}
       <div className="absolute top-0 right-0 -translate-y-1/2 translate-x-1/2 w-[50rem] h-[50rem] bg-gradient-to-br from-brand-cyan/10 to-blue-500/10 rounded-full blur-3xl animate-pulse" style={{ animationDuration: '8s' }} />
-      <div className="absolute bottom-0 left-0 translate-y-1/2 -translate-x-1/2 w-[50rem] h-[50rem] bg-gradient-to-tr from-purple-500/10 to-brand-deep/10 rounded-full blur-3xl animate-pulse" style={{ animationDuration: '10s', animationDelay: '2s' }} />
+      <div className="absolute bottom-0 left-0 translate-y-1/2 -translate-x-1/2 w-[50rem] h-[50rem] bg-gradient-to-tr from-purple-500/10 to-[#29619e]/10 rounded-full blur-3xl animate-pulse" style={{ animationDuration: '10s', animationDelay: '2s' }} />
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[40rem] h-[40rem] bg-gradient-to-r from-emerald-500/5 to-teal-500/5 rounded-full blur-3xl" />
 
       <div className="container relative z-10 px-4 sm:px-6 md:px-8 mx-auto max-w-7xl">
@@ -77,10 +77,10 @@ export function WhyChooseUs() {
           <h2 className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-brand-dark mb-6 tracking-tight leading-tight">
             Why Choose{' '}
             <span className="relative inline-block">
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-cyan via-blue-500 to-brand-deep">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-cyan to-[#29619e]">
                 Techsonance?
               </span>
-              <div className="absolute -bottom-2 left-0 right-0 h-1 bg-gradient-to-r from-brand-cyan via-blue-500 to-brand-deep rounded-full opacity-30" />
+              <div className="absolute -bottom-2 left-0 right-0 h-1 bg-gradient-to-r from-brand-cyan to-[#29619e] rounded-full opacity-30" />
             </span>
           </h2>
 
@@ -179,7 +179,7 @@ function FeatureCard({
         </div>
 
         {/* Title with Gradient Hover Effect */}
-        <h3 className="text-xl sm:text-2xl font-bold text-brand-dark mb-4 leading-tight group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-brand-cyan group-hover:to-brand-deep transition-all duration-300">
+        <h3 className="text-xl sm:text-2xl font-bold text-brand-dark mb-4 leading-tight group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-brand-cyan group-hover:to-[#29619e] transition-all duration-300">
           {title}
         </h3>
 

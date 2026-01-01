@@ -75,7 +75,7 @@ export function DataAnalyticsHero({ shortDescription }: DataAnalyticsHeroProps) 
                      {shortDescription}
                   </motion.p>
                   <motion.div variants={fadeInUp} className="flex flex-col sm:flex-row gap-4">
-                     <a href="#contact" className="px-8 py-4 bg-gradient-to-r from-brand-cyan to-brand-deep text-white font-medium rounded-xl hover:scale-105 transition-all flex items-center justify-center gap-2 shadow-lg shadow-cyan-500/20 group">
+                     <a href="#contact" className="px-8 py-4 bg-gradient-to-r from-brand-cyan to-[#29619e] text-white font-medium rounded-xl hover:scale-105 transition-all flex items-center justify-center gap-2 shadow-lg shadow-cyan-500/20 group">
                         Get Insights
                         <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                      </a>
@@ -97,7 +97,7 @@ export function DataAnalyticsHero({ shortDescription }: DataAnalyticsHeroProps) 
                      <div className="flex justify-between items-center mb-6">
                         <div>
                            <div className="text-sm text-slate-400 font-medium">Monthly Revenue</div>
-                           <div className="text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-brand-cyan to-brand-deep">$124,500</div>
+                           <div className="text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-brand-cyan to-[#29619e]">$124,500</div>
                         </div>
                         <div className="bg-emerald-50 text-emerald-600 px-2 py-1 rounded text-sm font-bold flex items-center gap-1">
                            <TrendingUp className="w-3 h-3" /> +12%

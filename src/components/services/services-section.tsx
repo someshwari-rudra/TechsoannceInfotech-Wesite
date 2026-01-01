@@ -27,11 +27,11 @@ const serviceIcons: LucideIcon[] = [
 // Badge color configurations - Updated to match brand feel
 const badgeColors: Record<string, string> = {
   Popular: "bg-gradient-to-r from-brand-cyan to-cyan-400 text-white",
-  Trending: "bg-gradient-to-r from-brand-deep to-brand-dark text-white",
+  Trending: "bg-gradient-to-r from-[#29619e] to-brand-dark text-white",
   Enterprise: "bg-gradient-to-r from-slate-700 to-brand-dark text-white",
   Growth: "bg-gradient-to-r from-emerald-500 to-emerald-600 text-white",
   "Quick Start": "bg-gradient-to-r from-amber-500 to-orange-500 text-white",
-  Featured: "bg-gradient-to-r from-brand-cyan to-brand-deep text-white",
+  Featured: "bg-gradient-to-r from-brand-cyan to-[#29619e] text-white",
 };
 
 export function ServicesSection() {
@@ -92,7 +92,7 @@ export function ServicesSection() {
           </p>
           <Link
             href="#consultancy-section"
-            className="group inline-flex items-center px-8 py-4 rounded-full bg-gradient-to-r from-brand-cyan to-brand-deep text-white font-semibold shadow-lg shadow-brand-cyan/20 hover:shadow-xl hover:shadow-brand-cyan/30 hover:scale-105 transition-all duration-300"
+            className="group inline-flex items-center px-8 py-4 rounded-full bg-gradient-to-r from-brand-cyan to-[#29619e] text-white font-semibold shadow-lg shadow-brand-cyan/20 hover:shadow-xl hover:shadow-brand-cyan/30 hover:scale-105 transition-all duration-300"
           >
             Schedule a free call
             <ArrowRight className="inline-block ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -161,7 +161,7 @@ function ServiceCard({
       >
         <div className="relative h-full p-6 md:p-8 rounded-2xl md:rounded-3xl bg-white border border-slate-100 shadow-xl shadow-slate-200/50 hover:shadow-2xl hover:shadow-brand-cyan/10 transition-all duration-500 hover:scale-[1.02] hover:-translate-y-2 overflow-hidden flex flex-col items-center text-center">
           {/* Top Accent Bar - Brand Gradient */}
-          <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-brand-cyan to-brand-deep transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-center" />
+          <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-brand-cyan to-[#29619e] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-center" />
 
           {/* Badge */}
           <div className="relative mb-6 md:mb-8">
@@ -178,7 +178,7 @@ function ServiceCard({
           {/* Content Wrapper - Flex Grow to push button down */}
           <div className="relative flex-1 flex flex-col w-full">
             <div className="space-y-4 mb-4">
-              <h3 className="text-xl md:text-2xl font-bold text-brand-dark group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-brand-cyan group-hover:to-brand-deep transition-all duration-300">
+              <h3 className="text-xl md:text-2xl font-bold text-brand-dark group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-brand-cyan group-hover:to-[#29619e] transition-all duration-300">
                 {title}
               </h3>
               <p className="text-base text-slate-600 leading-relaxed font-medium">

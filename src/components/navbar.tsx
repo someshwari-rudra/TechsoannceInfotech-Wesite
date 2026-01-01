@@ -82,7 +82,7 @@ export function Navbar() {
                     {item.label}
                     <ChevronDown className="w-4 h-4 mt-0.5 group-hover:rotate-180 transition-transform duration-300" />
                     <span
-                      className={`absolute -bottom-1 left-0 h-[2px] bg-gradient-to-r from-brand-cyan to-brand-deep transition-all duration-300 
+                      className={`absolute -bottom-1 left-0 h-[2px] bg-gradient-to-r from-brand-cyan to-[#29619e] transition-all duration-300 
                       ${
                         activeMegaMenu === item.label
                           ? "w-full"
@@ -102,7 +102,7 @@ export function Navbar() {
                   >
                     {item.label}
                     <span
-                      className={`absolute -bottom-1 left-0 h-[2px] bg-gradient-to-r from-brand-cyan to-brand-deep transition-all duration-300 
+                      className={`absolute -bottom-1 left-0 h-[2px] bg-gradient-to-r from-brand-cyan to-[#29619e] transition-all duration-300 
                       ${
                         pathname === item.href
                           ? "w-full"
@@ -127,7 +127,7 @@ export function Navbar() {
                               <li key={subItem.slug}>
                                 <Link
                                   href={`/hire/${subItem.slug}`}
-                                  className="text-sm text-slate-600 transition-all duration-300 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-cyan-500 hover:to-brand-deep hover:translate-x-1 block"
+                                  className="text-sm text-slate-600 transition-all duration-300 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-cyan-500 hover:to-[#29619e] hover:translate-x-1 block"
                                 >
                                   {subItem.label.replace("Hire ", "")}
                                 </Link>
@@ -143,7 +143,7 @@ export function Navbar() {
             ))}
             <Button
               onClick={() => setIsQuoteOpen(true)}
-              className="bg-gradient-to-r from-brand-cyan to-brand-deep text-white border-0 shadow-lg shadow-brand-cyan/30 hover:shadow-xl hover:shadow-brand-cyan/40 transition-all duration-300 rounded-full px-6 font-semibold"
+              className="bg-gradient-to-r from-brand-cyan to-[#29619e] text-white border-0 shadow-lg shadow-brand-cyan/30 hover:shadow-xl hover:shadow-brand-cyan/40 transition-all duration-300 rounded-full px-6 font-semibold"
             >
               Get a Quote
             </Button>
@@ -188,7 +188,7 @@ export function Navbar() {
                               <Link
                                 key={subItem.slug}
                                 href={`/hire/${subItem.slug}`}
-                                className="text-sm sm:text-base text-slate-600 transition-all duration-300 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-cyan-500 hover:to-brand-deep py-2.5 sm:py-3 min-h-[44px] flex items-center"
+                                className="text-sm sm:text-base text-slate-600 transition-all duration-300 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-cyan-500 hover:to-[#29619e] py-2.5 sm:py-3 min-h-[44px] flex items-center"
                                 onClick={() => setIsMenuOpen(false)}
                               >
                                 {subItem.label.replace("Hire ", "")}
@@ -216,7 +216,7 @@ export function Navbar() {
                   setIsMenuOpen(false);
                   setIsQuoteOpen(true);
                 }}
-                className="w-full bg-gradient-to-r from-brand-cyan to-brand-deep text-white border-0 shadow-lg shadow-brand-cyan/30 py-5 sm:py-6 rounded-xl font-bold text-base sm:text-lg min-h-[48px]"
+                className="w-full bg-gradient-to-r from-brand-cyan to-[#29619e] text-white border-0 shadow-lg shadow-brand-cyan/30 py-5 sm:py-6 rounded-xl font-bold text-base sm:text-lg min-h-[48px]"
               >
                 Get a Quote
               </Button>

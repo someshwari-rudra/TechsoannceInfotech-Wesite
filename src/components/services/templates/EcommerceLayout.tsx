@@ -105,7 +105,7 @@ export function EcommerceLayout({ service }: { service: ServiceData }) {
                                         <div className="bg-green-100 p-2 rounded-full text-green-600">
                                             <TrendingUp className="w-4 h-4" />
                                         </div>
-                                        <span className="font-bold bg-clip-text text-transparent bg-gradient-to-r from-brand-cyan to-brand-deep">{res}</span>
+                                        <span className="font-bold bg-clip-text text-transparent bg-gradient-to-r from-brand-cyan to-[#29619e]">{res}</span>
                                     </div>
                                 ))}
                             </div>

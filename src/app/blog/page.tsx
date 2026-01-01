@@ -59,7 +59,7 @@ export default function BlogPage() {
                   key={category}
                   onClick={() => setSelectedCategory(category)}
                   className={`px-6 py-3 rounded-xl font-semibold transition-all duration-200 ${selectedCategory === category
-                    ? 'bg-gradient-to-r from-brand-cyan to-brand-deep text-white shadow-lg shadow-cyan-500/30'
+                    ? 'bg-gradient-to-r from-brand-cyan to-[#29619e] text-white shadow-lg shadow-cyan-500/30'
                     : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
                     }`}
                 >

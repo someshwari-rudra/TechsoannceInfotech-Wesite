@@ -44,7 +44,7 @@ export function EcommerceHero({ shortDescription }: EcommerceHeroProps) {
               {shortDescription}
             </motion.p>
             <motion.div variants={fadeInUp} className="flex flex-col sm:flex-row gap-5">
-              <a href="#contact" className="px-8 py-4 bg-gradient-to-r from-brand-cyan to-brand-deep text-white font-bold rounded-full hover:scale-105 transition-all shadow-lg shadow-cyan-500/20">
+              <a href="#contact" className="px-8 py-4 bg-gradient-to-r from-brand-cyan to-[#29619e] text-white font-bold rounded-full hover:scale-105 transition-all shadow-lg shadow-cyan-500/20">
                 Launch Store
               </a>
             </motion.div>

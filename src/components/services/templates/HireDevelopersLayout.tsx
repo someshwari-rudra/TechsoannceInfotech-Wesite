@@ -32,7 +32,7 @@ export function HireDevelopersLayout({ service }: { service: ServiceData }) {
                                 {service.shortDescription}
                             </p>
                             <div className="flex flex-col sm:flex-row gap-4">
-                                <a href="#contact" className="px-8 py-4 bg-gradient-to-r from-brand-cyan to-brand-deep text-white font-bold rounded-lg hover:scale-105 transition-all shadow-lg shadow-cyan-500/20">
+                                <a href="#contact" className="px-8 py-4 bg-gradient-to-r from-brand-cyan to-[#29619e] text-white font-bold rounded-lg hover:scale-105 transition-all shadow-lg shadow-cyan-500/20">
                                     View Developer Profiles
                                 </a>
                             </div>
@@ -103,7 +103,7 @@ export function HireDevelopersLayout({ service }: { service: ServiceData }) {
                             <div className="absolute -bottom-4 -left-4 bg-white p-4 rounded-xl shadow-lg border border-slate-100 z-20 flex items-center gap-3 animate-bounce-slow">
                                 <Shield className="w-8 h-8" style={{ stroke: 'url(#icon-gradient)' }} />
                                 <div>
-                                    <div className="font-bold bg-clip-text text-transparent bg-gradient-to-r from-brand-cyan to-brand-deep">Top 1%</div>
+                                    <div className="font-bold bg-clip-text text-transparent bg-gradient-to-r from-brand-cyan to-[#29619e]">Top 1%</div>
                                     <div className="text-xs text-slate-500">Vetted Talent</div>
                                 </div>
                             </div>

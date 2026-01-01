@@ -127,7 +127,7 @@ export function QuoteModal({ isOpen, onClose }: QuoteModalProps) {
             <div className="flex-1 p-4 md:p-8 lg:p-12 pt-14 md:pt-8 lg:pt-12">
               <div className="text-center mb-4 md:mb-6 lg:mb-8">
                 <h2 className="text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold text-slate-900 mb-2 md:mb-3 lg:mb-4 tracking-tight">
-                  Let's Build Something <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-cyan to-brand-deep">Amazing</span>
+                  Let's Build Something <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-cyan to-[#29619e]">Amazing</span>
                 </h2>
                 <p className="text-sm md:text-base lg:text-lg text-slate-500">
                   Connect with us for your requirements or queries. We'll get back to you within 24Hrs.
@@ -196,7 +196,7 @@ export function QuoteModal({ isOpen, onClose }: QuoteModalProps) {
                    <Button 
                     type="submit" 
                     disabled={isSubmitting}
-                    className="w-full px-6 py-3.5 md:px-8 md:py-5 lg:px-10 lg:py-7 bg-gradient-to-r from-brand-cyan to-brand-deep text-white font-bold rounded-xl text-sm md:text-base lg:text-lg shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40 hover:scale-[1.02] transition-all duration-300"
+                    className="w-full px-6 py-3.5 md:px-8 md:py-5 lg:px-10 lg:py-7 bg-gradient-to-r from-brand-cyan to-[#29619e] text-white font-bold rounded-xl text-sm md:text-base lg:text-lg shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40 hover:scale-[1.02] transition-all duration-300"
                    >
                      {isSubmitting ? (
                        <>

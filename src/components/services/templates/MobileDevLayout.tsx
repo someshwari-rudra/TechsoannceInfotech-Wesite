@@ -40,7 +40,7 @@ export function MobileDevLayout({ service }: { service: ServiceData }) {
                                 {service.shortDescription}
                             </p>
                             <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-                                <a href="#contact" className="px-8 py-4 bg-gradient-to-r from-brand-cyan to-brand-deep text-white font-bold rounded-2xl transition-all shadow-lg shadow-cyan-500/20 hover:scale-105">
+                                <a href="#contact" className="px-8 py-4 bg-gradient-to-r from-brand-cyan to-[#29619e] text-white font-bold rounded-2xl transition-all shadow-lg shadow-cyan-500/20 hover:scale-105">
                                     Start Building
                                 </a>
                             </div>
@@ -104,11 +104,11 @@ export function MobileDevLayout({ service }: { service: ServiceData }) {
                         <div className="grid grid-cols-2 gap-4">
                             {/* Decorative Stats Cards */}
                             <div className="p-6 bg-white rounded-3xl shadow-lg shadow-cyan-100 border border-slate-100">
-                                <div className="text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-brand-cyan to-brand-deep mb-1">4.8</div>
+                                <div className="text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-brand-cyan to-[#29619e] mb-1">4.8</div>
                                 <div className="text-sm font-semibold text-slate-500">App Store Rating</div>
                             </div>
                             <div className="p-6 bg-white rounded-3xl shadow-lg shadow-blue-100 border border-slate-100 mt-8">
-                                <div className="text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-brand-cyan to-brand-deep mb-1">99%</div>
+                                <div className="text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-brand-cyan to-[#29619e] mb-1">99%</div>
                                 <div className="text-sm font-semibold text-slate-500">Crash-Free Users</div>
                             </div>
                             <div className="p-6 bg-[#0A1A2F] rounded-3xl shadow-xl text-white">

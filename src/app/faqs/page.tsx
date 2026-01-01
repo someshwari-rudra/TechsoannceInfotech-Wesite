@@ -65,7 +65,7 @@ export default function FAQPage() {
                   key={category.id}
                   onClick={() => setActiveCategory(category.id)}
                   className={`px-4 sm:px-6 py-2.5 sm:py-3 rounded-xl font-semibold transition-all duration-200 text-sm sm:text-base ${activeCategory === category.id
-                    ? 'bg-gradient-to-r from-brand-cyan to-brand-deep text-white shadow-lg shadow-cyan-500/30'
+                    ? 'bg-gradient-to-r from-brand-cyan to-[#29619e] text-white shadow-lg shadow-cyan-500/30'
                     : 'bg-white text-gray-700 border-2 border-gray-200 hover:border-brand-cyan/50'
                     }`}
                 >

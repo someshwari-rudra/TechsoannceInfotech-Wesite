@@ -63,7 +63,7 @@ export default function ServicesPage() {
               </div>
 
               <Link href={servicesConfig.hero.ctaHref}>
-                <Button className="px-8 py-6 bg-gradient-to-r from-brand-cyan to-brand-deep hover:scale-105 transition-all duration-300 shadow-lg shadow-cyan-500/20 text-white font-bold text-lg rounded-xl">
+                <Button className="px-8 py-6 bg-gradient-to-r from-brand-cyan to-[#29619e] hover:scale-105 transition-all duration-300 shadow-lg shadow-cyan-500/20 text-white font-bold text-lg rounded-xl">
                   {servicesConfig.hero.ctaText}
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Button>
@@ -247,7 +247,7 @@ export default function ServicesPage() {
       </section>
 
       {/* Industries We Serve - Auto-Scrolling Marquee */}
-      <section className="py-20 md:py-28 bg-gradient-to-br from-brand-dark to-brand-deep text-white relative overflow-hidden">
+      <section className="py-20 md:py-28 bg-gradient-to-br from-brand-dark to-[#29619e] text-white relative overflow-hidden">
         <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-5" />
         <div className="absolute top-0 right-0 w-96 h-96 bg-brand-cyan/10 rounded-full blur-3xl" />
 
@@ -267,7 +267,7 @@ export default function ServicesPage() {
           <div className="relative">
             {/* Gradient overlays for fade effect */}
             <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-brand-dark to-transparent z-10" />
-            <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-brand-deep to-transparent z-10" />
+            <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-[#29619e] to-transparent z-10" />
 
             <div className="flex overflow-hidden">
               {/* First set of industries */}

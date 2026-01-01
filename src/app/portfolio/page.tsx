@@ -181,7 +181,7 @@ export default function PortfolioPage() {
                                 <div className="inline-flex items-center justify-center w-12 h-12 bg-brand-cyan/10 rounded-xl mb-4">
                                     <stat.icon className="w-6 h-6 text-brand-cyan" />
                                 </div>
-                                <div className="text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-brand-cyan to-brand-deep mb-2">{stat.value}</div>
+                                <div className="text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-brand-cyan to-[#29619e] mb-2">{stat.value}</div>
                                 <div className="text-sm text-slate-600">{stat.label}</div>
                             </motion.div>
                         ))}
@@ -206,7 +206,7 @@ export default function PortfolioPage() {
                                 key={category.id}
                                 onClick={() => setActiveCategory(category.id)}
                                 className={`px-6 py-3 rounded-xl font-semibold transition-all duration-200 text-sm ${activeCategory === category.id
-                                    ? 'bg-gradient-to-r from-brand-cyan to-brand-deep text-white shadow-lg shadow-brand-cyan/30'
+                                    ? 'bg-gradient-to-r from-brand-cyan to-[#29619e] text-white shadow-lg shadow-brand-cyan/30'
                                     : 'bg-white text-slate-700 border-2 border-slate-200 hover:border-brand-cyan/50'
                                     }`}
                             >
@@ -329,7 +329,7 @@ export default function PortfolioPage() {
             </section>
 
             {/* CTA Section */}
-            <section className="py-20 px-6 bg-gradient-to-r from-brand-cyan to-brand-deep">
+            <section className="py-20 px-6 bg-gradient-to-r from-brand-cyan to-[#29619e]">
                 <div className="container mx-auto max-w-4xl text-center">
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}

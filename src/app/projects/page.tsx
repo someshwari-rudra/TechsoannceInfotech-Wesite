@@ -5,7 +5,7 @@ export default function ProjectCardDemo() {
         <div className="min-h-screen bg-background py-16 px-4">
             <div className="max-w-7xl mx-auto">
                 <div className="text-center mb-12">
-                    <h1 className="text-4xl font-bold mb-4 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-brand-cyan hover:to-brand-deep transition-all duration-300 cursor-default">Our Engineering Excellence</h1>
+                    <h1 className="text-4xl font-bold mb-4 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-brand-cyan hover:to-[#29619e] transition-all duration-300 cursor-default">Our Engineering Excellence</h1>
                     <p className="text-muted-foreground text-lg">
                         We build scalable, secure, and high-performance architectures that power complex business operations.
                     </p>

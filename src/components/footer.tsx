@@ -63,7 +63,7 @@ export function Footer() {
                 <li>
                   <a
                     href={`mailto:${contactConfig.contactOptions.options[0].value}`}
-                    className="flex items-start gap-2 transition-all duration-300 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-cyan-500 hover:to-brand-deep group py-0.5"
+                    className="flex items-start gap-2 transition-all duration-300 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-cyan-500 hover:to-[#29619e] group py-0.5"
                   >
                     <Mail className="w-3.5 h-3.5 text-brand-cyan/70 group-hover:text-brand-cyan mt-0.5 flex-shrink-0" />
                     <span className="text-xs md:text-sm break-words">{contactConfig.contactOptions.options[0].value}</span>
@@ -72,7 +72,7 @@ export function Footer() {
                 <li>
                   <a
                     href={`tel:${contactConfig.contactOptions.options[1].value.replace(/\s/g, '')}`}
-                    className="flex items-start gap-2 transition-all duration-300 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-cyan-500 hover:to-brand-deep group py-0.5"
+                    className="flex items-start gap-2 transition-all duration-300 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-cyan-500 hover:to-[#29619e] group py-0.5"
                   >
                     <Phone className="w-3.5 h-3.5 text-brand-cyan/70 group-hover:text-brand-cyan mt-0.5 flex-shrink-0" />
                     <span className="text-xs md:text-sm break-words">{contactConfig.contactOptions.options[1].value}</span>
@@ -107,7 +107,7 @@ export function Footer() {
                 { label: "FAQs", href: "/faqs" },
               ].map((item) => (
                 <li key={item.label}>
-                  <Link href={item.href} className="flex items-center gap-2 transition-all duration-300 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-cyan-500 hover:to-brand-deep group py-0.5 text-xs md:text-sm">
+                  <Link href={item.href} className="flex items-center gap-2 transition-all duration-300 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-cyan-500 hover:to-[#29619e] group py-0.5 text-xs md:text-sm">
                     <ArrowRight className="w-3.5 h-3.5 text-brand-cyan/50 group-hover:translate-x-1 transition-transform" />
                     {item.label}
                   </Link>
@@ -121,31 +121,31 @@ export function Footer() {
             <h3 className="text-base md:text-lg font-bold text-white tracking-tight">Services</h3>
             <ul className="space-y-2">
               <li>
-                <Link href="/services/web-development" className="flex items-center gap-2 transition-all duration-300 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-cyan-500 hover:to-brand-deep group py-0.5">
+                <Link href="/services/web-development" className="flex items-center gap-2 transition-all duration-300 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-cyan-500 hover:to-[#29619e] group py-0.5">
                   <Globe className="w-3.5 h-3.5 text-brand-cyan/70 group-hover:text-brand-cyan transition-colors" />
                   <span className="text-xs md:text-sm">Web Development</span>
                 </Link>
               </li>
               <li>
-                <Link href="/services/mobile-development" className="flex items-center gap-2 transition-all duration-300 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-cyan-500 hover:to-brand-deep group py-0.5">
+                <Link href="/services/mobile-development" className="flex items-center gap-2 transition-all duration-300 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-cyan-500 hover:to-[#29619e] group py-0.5">
                   <Smartphone className="w-3.5 h-3.5 text-brand-cyan/70 group-hover:text-brand-cyan transition-colors" />
                   <span className="text-xs md:text-sm">Mobile Development</span>
                 </Link>
               </li>
               <li>
-                <Link href="/services/cloud-devops" className="flex items-center gap-2 transition-all duration-300 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-cyan-500 hover:to-brand-deep group py-0.5">
+                <Link href="/services/cloud-devops" className="flex items-center gap-2 transition-all duration-300 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-cyan-500 hover:to-[#29619e] group py-0.5">
                   <Server className="w-3.5 h-3.5 text-brand-cyan/70 group-hover:text-brand-cyan transition-colors" />
                   <span className="text-xs md:text-sm">Cloud & DevOps</span>
                 </Link>
               </li>
               <li>
-                <Link href="/services/ecommerce" className="flex items-center gap-2 transition-all duration-300 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-cyan-500 hover:to-brand-deep group py-0.5">
+                <Link href="/services/ecommerce" className="flex items-center gap-2 transition-all duration-300 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-cyan-500 hover:to-[#29619e] group py-0.5">
                   <ShoppingCart className="w-3.5 h-3.5 text-brand-cyan/70 group-hover:text-brand-cyan transition-colors" />
                   <span className="text-xs md:text-sm">E-Commerce</span>
                 </Link>
               </li>
               <li>
-                <Link href="/services/data-analytics" className="flex items-center gap-2 transition-all duration-300 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-cyan-500 hover:to-brand-deep group py-0.5">
+                <Link href="/services/data-analytics" className="flex items-center gap-2 transition-all duration-300 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-cyan-500 hover:to-[#29619e] group py-0.5">
                   <Database className="w-3.5 h-3.5 text-brand-cyan/70 group-hover:text-brand-cyan transition-colors" />
                   <span className="text-xs md:text-sm">Data Analytics</span>
                 </Link>
@@ -158,31 +158,31 @@ export function Footer() {
             <h3 className="text-base md:text-lg font-bold text-white tracking-tight">Hire Developers</h3>
             <ul className="space-y-2">
               <li>
-                <Link href="/hire/reactjs-developers" className="flex items-center gap-2 transition-all duration-300 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-cyan-500 hover:to-brand-deep group py-0.5">
+                <Link href="/hire/reactjs-developers" className="flex items-center gap-2 transition-all duration-300 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-cyan-500 hover:to-[#29619e] group py-0.5">
                   <Code2 className="w-3.5 h-3.5 text-brand-cyan/70 group-hover:text-brand-cyan transition-colors" />
                   <span className="text-xs md:text-sm">ReactJS Developers</span>
                 </Link>
               </li>
               <li>
-                <Link href="/hire/nodejs-developers" className="flex items-center gap-2 transition-all duration-300 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-cyan-500 hover:to-brand-deep group py-0.5">
+                <Link href="/hire/nodejs-developers" className="flex items-center gap-2 transition-all duration-300 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-cyan-500 hover:to-[#29619e] group py-0.5">
                   <Terminal className="w-3.5 h-3.5 text-brand-cyan/70 group-hover:text-brand-cyan transition-colors" />
                   <span className="text-xs md:text-sm">Node.js Developers</span>
                 </Link>
               </li>
               <li>
-                <Link href="/hire/react-native-developers" className="flex items-center gap-2 transition-all duration-300 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-cyan-500 hover:to-brand-deep group py-0.5">
+                <Link href="/hire/react-native-developers" className="flex items-center gap-2 transition-all duration-300 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-cyan-500 hover:to-[#29619e] group py-0.5">
                   <Smartphone className="w-3.5 h-3.5 text-brand-cyan/70 group-hover:text-brand-cyan transition-colors" />
                   <span className="text-xs md:text-sm">React Native Devs</span>
                 </Link>
               </li>
               <li>
-                <Link href="/hire/python-developers" className="flex items-center gap-2 transition-all duration-300 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-cyan-500 hover:to-brand-deep group py-0.5">
+                <Link href="/hire/python-developers" className="flex items-center gap-2 transition-all duration-300 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-cyan-500 hover:to-[#29619e] group py-0.5">
                   <Database className="w-3.5 h-3.5 text-brand-cyan/70 group-hover:text-brand-cyan transition-colors" />
                   <span className="text-xs md:text-sm">Python Developers</span>
                 </Link>
               </li>
               <li>
-                <Link href="/hire/full-stack-developers" className="flex items-center gap-2 transition-all duration-300 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-cyan-500 hover:to-brand-deep group py-0.5">
+                <Link href="/hire/full-stack-developers" className="flex items-center gap-2 transition-all duration-300 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-cyan-500 hover:to-[#29619e] group py-0.5">
                   <Cpu className="w-3.5 h-3.5 text-brand-cyan/70 group-hover:text-brand-cyan transition-colors" />
                   <span className="text-xs md:text-sm">Full Stack Developers</span>
                 </Link>
@@ -256,11 +256,11 @@ export function Footer() {
           </div>
 
           <nav className="flex flex-wrap justify-center gap-3 md:gap-5 text-[11px] md:text-xs font-medium text-slate-400">
-            <Link href="/career" className="transition-all duration-300 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-cyan-500 hover:to-brand-deep">Career</Link>
-            <Link href="/about" className="transition-all duration-300 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-cyan-500 hover:to-brand-deep">About Us</Link>
-            <Link href="/legal/privacy-policy" className="transition-all duration-300 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-cyan-500 hover:to-brand-deep">Privacy Policy</Link>
-            <Link href="/legal/terms-conditions" className="transition-all duration-300 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-cyan-500 hover:to-brand-deep">Terms & Conditions</Link>
-            <Link href="/sitemap" className="transition-all duration-300 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-cyan-500 hover:to-brand-deep">Sitemap</Link>
+            <Link href="/career" className="transition-all duration-300 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-cyan-500 hover:to-[#29619e]">Career</Link>
+            <Link href="/about" className="transition-all duration-300 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-cyan-500 hover:to-[#29619e]">About Us</Link>
+            <Link href="/legal/privacy-policy" className="transition-all duration-300 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-cyan-500 hover:to-[#29619e]">Privacy Policy</Link>
+            <Link href="/legal/terms-conditions" className="transition-all duration-300 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-cyan-500 hover:to-[#29619e]">Terms & Conditions</Link>
+            <Link href="/sitemap" className="transition-all duration-300 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-cyan-500 hover:to-[#29619e]">Sitemap</Link>
           </nav>
         </div>
       </div>

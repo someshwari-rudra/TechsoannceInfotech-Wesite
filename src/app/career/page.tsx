@@ -103,7 +103,7 @@ export default function CareerPage() {
             </div>
 
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white mb-6 leading-tight">
-              {careerConfig.hero.title.split('With Us')[0]}<span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-cyan to-brand-deep">With Us</span>
+              {careerConfig.hero.title.split('With Us')[0]}<span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-cyan to-[#29619e]">With Us</span>
             </h1>
 
             <p className="text-lg md:text-xl text-slate-300 mb-10 max-w-3xl mx-auto leading-relaxed">
@@ -112,7 +112,7 @@ export default function CareerPage() {
 
             <div className="flex flex-wrap gap-4 justify-center">
               <a href={careerConfig.hero.primaryCTA.href}>
-                <Button className="px-8 py-6 bg-gradient-to-r from-brand-cyan to-brand-deep hover:scale-105 transition-all duration-300 shadow-lg shadow-brand-cyan/20 text-white font-semibold text-lg rounded-lg">
+                <Button className="px-8 py-6 bg-gradient-to-r from-brand-cyan to-[#29619e] hover:scale-105 transition-all duration-300 shadow-lg shadow-brand-cyan/20 text-white font-semibold text-lg rounded-lg">
                   {careerConfig.hero.primaryCTA.text}
                 </Button>
               </a>
@@ -136,7 +136,7 @@ export default function CareerPage() {
             className="text-center mb-12"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">{careerConfig.whyWorkWithUs.title}</h2>
-            <div className="h-1.5 w-24 bg-gradient-to-r from-brand-cyan to-brand-deep mx-auto rounded-full" />
+            <div className="h-1.5 w-24 bg-gradient-to-r from-brand-cyan to-[#29619e] mx-auto rounded-full" />
           </motion.div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 md:gap-6">
@@ -152,7 +152,7 @@ export default function CareerPage() {
         <div className="container mx-auto px-4 md:px-6 max-w-7xl">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">{careerConfig.lifeAtCompany.title}</h2>
-            <div className="h-1.5 w-24 bg-gradient-to-r from-brand-cyan to-brand-deep mx-auto rounded-full mb-6" />
+            <div className="h-1.5 w-24 bg-gradient-to-r from-brand-cyan to-[#29619e] mx-auto rounded-full mb-6" />
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
               {careerConfig.lifeAtCompany.description}
             </p>
@@ -182,7 +182,7 @@ export default function CareerPage() {
             className="text-center mb-12"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Open Positions</h2>
-            <div className="h-1.5 w-24 bg-gradient-to-r from-brand-cyan to-brand-deep mx-auto rounded-full" />
+            <div className="h-1.5 w-24 bg-gradient-to-r from-brand-cyan to-[#29619e] mx-auto rounded-full" />
           </motion.div>
 
           <div className="grid grid-cols-1 gap-6">
@@ -210,7 +210,7 @@ export default function CareerPage() {
             className="text-center mb-12"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">{careerConfig.hiringProcess.title}</h2>
-            <div className="h-1.5 w-24 bg-gradient-to-r from-brand-cyan to-brand-deep mx-auto rounded-full mb-4" />
+            <div className="h-1.5 w-24 bg-gradient-to-r from-brand-cyan to-[#29619e] mx-auto rounded-full mb-4" />
             <p className="text-gray-600">{careerConfig.hiringProcess.subtitle}</p>
           </motion.div>
 
@@ -352,7 +352,7 @@ export default function CareerPage() {
 
                   <Button
                     disabled={isPending}
-                    className="w-full h-14 bg-gradient-to-r from-brand-cyan to-brand-deep hover:scale-105 transition-all duration-300 shadow-md shadow-brand-cyan/20 text-white font-semibold text-lg rounded-lg"
+                    className="w-full h-14 bg-gradient-to-r from-brand-cyan to-[#29619e] hover:scale-105 transition-all duration-300 shadow-md shadow-brand-cyan/20 text-white font-semibold text-lg rounded-lg"
                   >
                     {isPending ? (
                       <>
@@ -371,7 +371,7 @@ export default function CareerPage() {
       </section >
 
       {/* Final CTA */}
-      < section className="py-16 bg-gradient-to-r from-brand-dark to-brand-deep text-white" >
+      < section className="py-16 bg-gradient-to-r from-brand-dark to-[#29619e] text-white" >
         <div className="container mx-auto px-4 md:px-6 max-w-4xl text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -383,7 +383,7 @@ export default function CareerPage() {
             </h2>
 
             <a href={careerConfig.finalCTA.href}>
-              <Button className="px-10 py-6 bg-gradient-to-r from-brand-cyan to-brand-deep hover:scale-105 transition-all duration-300 shadow-lg shadow-brand-cyan/20 text-white font-semibold text-lg rounded-lg">
+              <Button className="px-10 py-6 bg-gradient-to-r from-brand-cyan to-[#29619e] hover:scale-105 transition-all duration-300 shadow-lg shadow-brand-cyan/20 text-white font-semibold text-lg rounded-lg">
                 {careerConfig.finalCTA.buttonText}
               </Button>
             </a>
@@ -411,7 +411,7 @@ function WhyCard({ icon: Icon, title }: { icon: any, title: string }) {
         <Icon className="w-6 h-6 text-brand-cyan" style={{ stroke: 'url(#icon-gradient)' }} />
       </div>
       <div className="flex-1 flex items-center min-h-[48px]">
-        <p className="text-gray-700 font-bold leading-tight group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-brand-cyan group-hover:to-brand-deep transition-all duration-300">{title}</p>
+        <p className="text-gray-700 font-bold leading-tight group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-brand-cyan group-hover:to-[#29619e] transition-all duration-300">{title}</p>
       </div>
     </motion.div>
   )
@@ -437,14 +437,14 @@ function JobCard({ job, onApply }: { job: any, onApply: () => void }) {
               <Home className="w-4 h-4 text-brand-cyan" />
               {job.location}
             </span>
-            <span className="px-3 py-1 bg-gradient-to-r from-brand-cyan to-brand-deep text-white rounded-full font-medium shadow-sm shadow-brand-cyan/20 text-xs tracking-wide">
+            <span className="px-3 py-1 bg-gradient-to-r from-brand-cyan to-[#29619e] text-white rounded-full font-medium shadow-sm shadow-brand-cyan/20 text-xs tracking-wide">
               {job.type}
             </span>
           </div>
         </div>
         <Button
           onClick={onApply}
-          className="bg-gradient-to-r from-brand-cyan to-brand-deep hover:scale-105 transition-all duration-300 shadow-md shadow-brand-cyan/20 text-white font-semibold px-6 py-3 rounded-lg whitespace-nowrap"
+          className="bg-gradient-to-r from-brand-cyan to-[#29619e] hover:scale-105 transition-all duration-300 shadow-md shadow-brand-cyan/20 text-white font-semibold px-6 py-3 rounded-lg whitespace-nowrap"
         >
           Apply Now
         </Button>
@@ -472,14 +472,14 @@ function HiringStep({ number, title, description, isLast }: any) {
       transition={{ delay: number * 0.1 }}
       className="relative group flex flex-col items-center text-center p-4 rounded-2xl transition-all duration-300 hover:bg-white/50 hover:shadow-lg hover:-translate-y-1"
     >
-      <div className="w-16 h-16 bg-gradient-to-br from-brand-cyan to-brand-deep text-white rounded-full flex items-center justify-center font-bold text-xl mb-4 shadow-lg shadow-brand-cyan/20 group-hover:scale-110 transition-transform duration-300">
+      <div className="w-16 h-16 bg-gradient-to-br from-brand-cyan to-[#29619e] text-white rounded-full flex items-center justify-center font-bold text-xl mb-4 shadow-lg shadow-brand-cyan/20 group-hover:scale-110 transition-transform duration-300">
         {number}
       </div>
       <h4 className="font-bold text-gray-900 mb-2 group-hover:text-brand-cyan transition-colors duration-300">{title}</h4>
       <p className="text-sm text-gray-600">{description}</p>
 
       {!isLast && (
-        <div className="hidden md:block absolute top-[3.5rem] left-[65%] w-[70%] h-0.5 bg-gradient-to-r from-brand-cyan to-brand-deep/30 opacity-30" />
+        <div className="hidden md:block absolute top-[3.5rem] left-[65%] w-[70%] h-0.5 bg-gradient-to-r from-brand-cyan to-[#29619e]/30 opacity-30" />
       )}
     </motion.div>
   )
@@ -498,7 +498,7 @@ function BenefitCard({ icon: Icon, title, delay }: { icon: any, title: string, d
         <div className="w-14 h-14 bg-gradient-to-br from-brand-cyan/10 to-brand-cyan/5 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
           <Icon className="w-7 h-7" style={{ stroke: 'url(#icon-gradient)' }} />
         </div>
-        <h4 className="text-gray-900 font-semibold text-sm leading-tight group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-brand-cyan group-hover:to-brand-deep transition-all duration-300">{title}</h4>
+        <h4 className="text-gray-900 font-semibold text-sm leading-tight group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-brand-cyan group-hover:to-[#29619e] transition-all duration-300">{title}</h4>
       </div>
     </motion.div>
   )

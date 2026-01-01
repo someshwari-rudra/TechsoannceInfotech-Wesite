@@ -9,7 +9,7 @@ const caseStudies = [
     title: "Custom Modular POS System",
     category: "FINTECH & HOSPITALITY",
     description: "A Progressive Web App engineered for offline reliability. Features a modular architecture where businesses only enable and pay for the features they actually use.",
-    imgSrc: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=2070&auto=format&fit=crop",
+    imgSrc: "/POS Mockup.png",
     technologies: ["React", "Node.js", "PostgreSQL", "PWA"],
     link: "/case-studies/transaction-engine",
   },
@@ -63,7 +63,7 @@ export function CaseStudies() {
             Proprietary Enterprise Solutions
           </span>
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-brand-dark mb-6">
-            Engineering Excellence
+            Case Studies
           </h2>
           <p className="text-base sm:text-lg text-slate-600 leading-relaxed max-w-3xl mx-auto">
             Showcasing our best work - where creativity meets functionality

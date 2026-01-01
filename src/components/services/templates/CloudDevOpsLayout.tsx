@@ -41,7 +41,7 @@ export function CloudDevOpsLayout({ service }: { service: ServiceData }) {
                         {service.shortDescription}
                      </p>
                      <div className="flex gap-4">
-                        <a href="#contact" className="px-6 py-3 bg-gradient-to-r from-brand-cyan to-brand-deep text-white font-bold rounded-lg hover:scale-105 transition-all flex items-center gap-2 shadow-lg shadow-cyan-500/20">
+                        <a href="#contact" className="px-6 py-3 bg-gradient-to-r from-brand-cyan to-[#29619e] text-white font-bold rounded-lg hover:scale-105 transition-all flex items-center gap-2 shadow-lg shadow-cyan-500/20">
                            <Server className="w-4 h-4" />
                            Optimize Infrastructure
                         </a>

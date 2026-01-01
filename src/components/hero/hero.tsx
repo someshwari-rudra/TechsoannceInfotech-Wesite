@@ -27,7 +27,7 @@ export function Hero() {
           transition={{ duration: 1, ease: "easeOut" }}
           className="flex flex-col items-center max-w-5xl w-full"
         >
-          <div className="mb-4 md:mb-6 px-3 md:px-4 py-1.5 md:py-2 rounded-full border-2 border-cyan-400/50 bg-gradient-to-r from-cyan-50 to-brand-deep/10 backdrop-blur-md shadow-xl shadow-cyan-500/20 inline-block">
+          <div className="mb-4 md:mb-6 px-3 md:px-4 py-1.5 md:py-2 rounded-full border-2 border-cyan-400/50 bg-gradient-to-r from-cyan-50 to-[#29619e]/10 backdrop-blur-md shadow-xl shadow-cyan-500/20 inline-block">
             <span className="text-[10px] md:text-xs font-black text-slate-900 uppercase tracking-[0.2em] md:tracking-[0.3em]">
               Next-Gen Digital Agency
             </span>
@@ -52,14 +52,14 @@ export function Hero() {
           >
             <button
               onClick={scrollToConsultancy}
-              className="w-full sm:w-auto px-6 md:px-8 py-3 md:py-4 bg-gradient-to-r from-brand-cyan to-brand-deep text-white font-bold rounded-full shadow-xl shadow-cyan-500/20 hover:scale-105 transition-all duration-300 flex items-center justify-center gap-2 touch-target"
+              className="w-full sm:w-auto px-6 md:px-8 py-3 md:py-4 bg-gradient-to-r from-brand-cyan to-[#29619e] text-white font-bold rounded-full shadow-xl shadow-cyan-500/20 hover:scale-105 transition-all duration-300 flex items-center justify-center gap-2 touch-target"
             >
               <span className="text-sm md:text-base">Let's Talk Business</span>
               <ArrowUpRight className="w-4 h-4 md:w-5 md:h-5" />
             </button>
             <button
               onClick={scrollToConsultancy}
-              className="w-full sm:w-auto px-6 md:px-8 py-3 md:py-4 bg-white/10 backdrop-blur-md border-2 border-white/30 text-slate-800 font-bold rounded-full hover:bg-gradient-to-r hover:from-brand-cyan/20 hover:to-brand-deep/20 hover:border-brand-cyan/50 transition-all duration-300 flex items-center justify-center gap-2 touch-target"
+              className="w-full sm:w-auto px-6 md:px-8 py-3 md:py-4 bg-white/10 backdrop-blur-md border-2 border-white/30 text-slate-800 font-bold rounded-full hover:bg-gradient-to-r hover:from-brand-cyan/20 hover:to-[#29619e]/20 hover:border-brand-cyan/50 transition-all duration-300 flex items-center justify-center gap-2 touch-target"
             >
               <span className="text-sm md:text-base">Schedule a free call</span>
             </button>
@@ -98,8 +98,8 @@ function StatCard({ value, label, delay, icon: Icon }: { value: string, label: s
       <div className="p-3 md:p-4 lg:p-5 rounded-xl md:rounded-2xl bg-white/50 backdrop-blur-md border border-white/40 shadow-xl shadow-slate-900/10 hover:shadow-2xl hover:shadow-slate-900/15 hover:bg-white/70 transition-all duration-300 hover:scale-105 hover:-translate-y-1">
         {/* Icon with gradient background */}
         <div className="mb-2 md:mb-3 flex justify-center">
-          <div className="p-1.5 md:p-2 lg:p-3 rounded-lg md:rounded-xl bg-gradient-to-br from-cyan-400/20 to-brand-deep/20 group-hover:from-cyan-400/30 group-hover:to-brand-deep/30 transition-all duration-300">
-            <Icon className="w-5 h-5 md:w-6 md:h-6 lg:w-8 lg:h-8 text-transparent bg-clip-text bg-gradient-to-br from-cyan-500 to-brand-deep" style={{
+          <div className="p-1.5 md:p-2 lg:p-3 rounded-lg md:rounded-xl bg-gradient-to-br from-cyan-400/20 to-[#29619e]/20 group-hover:from-cyan-400/30 group-hover:to-[#29619e]/30 transition-all duration-300">
+            <Icon className="w-5 h-5 md:w-6 md:h-6 lg:w-8 lg:h-8 text-transparent bg-clip-text bg-gradient-to-br from-cyan-500 to-[#29619e]" style={{
               filter: 'drop-shadow(0 0 8px rgba(6, 182, 212, 0.3))',
               stroke: 'url(#icon-gradient)',
               strokeWidth: 2
@@ -108,7 +108,7 @@ function StatCard({ value, label, delay, icon: Icon }: { value: string, label: s
           </div>
         </div>
 
-        <div className="text-2xl md:text-3xl lg:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-cyan-500 to-brand-deep mb-1 md:mb-2">
+        <div className="text-2xl md:text-3xl lg:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-cyan-500 to-[#29619e] mb-1 md:mb-2">
           {value}
         </div>
         <div className="text-[9px] md:text-[10px] lg:text-xs font-semibold text-slate-700 leading-tight">

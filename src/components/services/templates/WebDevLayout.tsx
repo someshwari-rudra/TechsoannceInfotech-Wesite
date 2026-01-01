@@ -105,7 +105,7 @@ export function WebDevLayout({ service }: { service: ServiceData }) {
                     <div className="text-xs text-slate-500 font-bold uppercase">
                       Performance
                     </div>
-                    <div className="text-lg font-bold bg-clip-text text-transparent bg-gradient-to-r from-brand-cyan to-brand-deep">
+                    <div className="text-lg font-bold bg-clip-text text-transparent bg-gradient-to-r from-brand-cyan to-[#29619e]">
                       99/100
                     </div>
                   </div>
@@ -253,7 +253,7 @@ export function WebDevLayout({ service }: { service: ServiceData }) {
               <div className="bg-white/5 border border-white/10 p-8 rounded-2xl backdrop-blur-sm">
                 <div className="flex items-center justify-center h-64 text-center">
                   <div>
-                    <div className="text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-brand-cyan to-brand-deep mb-2">
+                    <div className="text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-brand-cyan to-[#29619e] mb-2">
                       65%
                     </div>
                     <div className="text-slate-400 uppercase tracking-widest text-sm">

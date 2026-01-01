@@ -93,7 +93,7 @@ export function ConsultancyForm() {
 
           <Button
             disabled={isPending}
-            className="w-full h-14 md:h-16 bg-gradient-to-r from-brand-cyan to-brand-deep hover:scale-[1.02] text-white font-bold text-lg md:text-xl rounded-xl shadow-xl shadow-brand-cyan/20 transition-all duration-300 flex items-center justify-center gap-3 group"
+            className="w-full h-14 md:h-16 bg-gradient-to-r from-brand-cyan to-[#29619e] hover:scale-[1.02] text-white font-bold text-lg md:text-xl rounded-xl shadow-xl shadow-brand-cyan/20 transition-all duration-300 flex items-center justify-center gap-3 group"
           >
             {isPending ? (
               <>

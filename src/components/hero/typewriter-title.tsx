@@ -39,7 +39,7 @@ export function TypewriterTitle() {
 
   return (
     <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tighter mb-6">
-          <span className="bg-clip-text text-transparent bg-gradient-to-r from-brand-cyan to-brand-deep">
+          <span className="bg-clip-text text-transparent bg-gradient-to-r from-brand-cyan to-[#29619e]">
             {siteConfig.hero.staticText}
           </span>
       {/* Fixed width container to prevent layout shift - width calculated for longest word "Intelligence" */}
@@ -49,7 +49,7 @@ export function TypewriterTitle() {
           <motion.span
             animate={{ opacity: [0, 1, 0] }}
             transition={{ repeat: Infinity, duration: 0.8 }}
-            className="w-[3px] h-[1em] bg-gradient-to-b from-cyan-400 to-brand-deep ml-1 align-middle inline-block flex-shrink-0"
+            className="w-[3px] h-[1em] bg-gradient-to-b from-cyan-400 to-[#29619e] ml-1 align-middle inline-block flex-shrink-0"
           />
         </span>
         {/* Invisible text to reserve space for longest word */}
