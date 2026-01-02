@@ -134,13 +134,13 @@ export default function PortfolioPage() {
                         transition={{ duration: 0.6 }}
                         className="text-center"
                     >
-                        <div className="inline-flex items-center gap-2 px-4 py-2 bg-brand-cyan/20 backdrop-blur-sm border border-brand-cyan/30 rounded-full text-sm font-medium mb-6">
-                            <Code className="w-4 h-4" />
+                        <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-brand-cyan/10 to-[#29619e]/10 backdrop-blur-sm border border-brand-cyan/20 rounded-full text-sm font-medium mb-6 text-brand-cyan">
+                            <Code className="w-4 h-4" style={{ stroke: 'url(#portfolio-gradient)' }} />
                             Our Work Portfolio
                         </div>
 
                         <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-6 leading-tight">
-                            Our Work <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-cyan to-blue-400">Speaks for Itself</span>
+                            Our Work <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-cyan to-[#29619e]">Speaks for Itself</span>
                         </h1>
 
                         <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto mb-8">
@@ -162,6 +162,16 @@ export default function PortfolioPage() {
                             </div>
                         </div>
                     </motion.div>
+
+                    {/* Local Gradient Definition for Portfolio Page */}
+                    <svg width="0" height="0" className="absolute w-0 h-0" aria-hidden="true">
+                        <defs>
+                            <linearGradient id="portfolio-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stopColor="#06b6d4" />
+                                <stop offset="100%" stopColor="#29619e" />
+                            </linearGradient>
+                        </defs>
+                    </svg>
                 </div>
             </section>
 
@@ -178,8 +188,8 @@ export default function PortfolioPage() {
                                 transition={{ duration: 0.5, delay: index * 0.1 }}
                                 className="text-center"
                             >
-                                <div className="inline-flex items-center justify-center w-12 h-12 bg-brand-cyan/10 rounded-xl mb-4">
-                                    <stat.icon className="w-6 h-6 text-brand-cyan" />
+                                <div className="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-br from-brand-cyan/10 to-[#29619e]/10 rounded-xl mb-4 border border-brand-cyan/10">
+                                    <stat.icon className="w-6 h-6" style={{ stroke: 'url(#portfolio-gradient)' }} />
                                 </div>
                                 <div className="text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-brand-cyan to-[#29619e] mb-2">{stat.value}</div>
                                 <div className="text-sm text-slate-600">{stat.label}</div>
@@ -193,7 +203,7 @@ export default function PortfolioPage() {
             <section className="py-24 px-6">
                 <div className="container mx-auto max-w-7xl">
                     <div className="text-center mb-12">
-                        <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Featured Projects</h2>
+                        <h2 className="text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-brand-cyan to-[#29619e] mb-4">Featured Projects</h2>
                         <p className="text-lg text-slate-600 max-w-2xl mx-auto">
                             Explore our portfolio of successful projects across various industries and technologies
                         </p>
@@ -248,7 +258,7 @@ export default function PortfolioPage() {
 
                                         {/* Project Content */}
                                         <div className="p-6">
-                                            <h3 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-brand-cyan transition-colors">
+                                            <h3 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-brand-cyan group-hover:to-[#29619e] transition-all">
                                                 {project.title}
                                             </h3>
                                             <p className="text-sm text-slate-600 mb-4 line-clamp-2">
@@ -268,7 +278,7 @@ export default function PortfolioPage() {
                                             </div>
 
                                             {/* View Case Study Link */}
-                                            <div className="flex items-center gap-2 text-brand-cyan font-semibold text-sm group-hover:gap-3 transition-all">
+                                            <div className="flex items-center gap-2 text-transparent bg-clip-text bg-gradient-to-r from-brand-cyan to-[#29619e] font-bold text-sm group-hover:gap-3 transition-all">
                                                 View Case Study
                                                 <ArrowRight className="w-4 h-4" />
                                             </div>

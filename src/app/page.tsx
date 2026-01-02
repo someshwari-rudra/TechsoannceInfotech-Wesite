@@ -3,7 +3,7 @@ import { Hero } from "@/components/hero/hero";
 import { ServicesSection } from "@/components/services/services-section";
 import { WhyChooseUs } from "@/components/home/why-choose-us";
 import { CaseStudies } from "@/components/home/case-studies";
-import FAQWithSpiral from "@/components/ui/faq-spiral";
+
 import { ConsultancyForm } from "@/components/case-study/consultancy-form";
 import { CheckCircle2, Sparkles } from "lucide-react";
 
@@ -15,7 +15,7 @@ export default function Home() {
       <ServicesSection />
       <WhyChooseUs />
       <CaseStudies />
-      <FAQWithSpiral />
+
       {/* Contact Form Section */}
       <section id="consultancy-section" className="bg-white scroll-mt-16 md:scroll-mt-20 lg:scroll-mt-24">
         <div className="container mx-auto px-4 py-16 md:py-20">
