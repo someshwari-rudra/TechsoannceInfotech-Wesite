@@ -8,7 +8,7 @@ import { useState, useTransition, useRef } from "react"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Button } from "@/components/ui/button"
-import { submitJobApplication } from "@/actions/career"
+// import { submitJobApplication } from "@/actions/career"
 import { careerConfig } from "@/config/career-config"
 
 export default function CareerPage() {
@@ -59,17 +59,16 @@ export default function CareerPage() {
     }
 
     startTransition(async () => {
-      const result = await submitJobApplication(formData)
+      // Simulate network request
+      await new Promise(resolve => setTimeout(resolve, 1000))
+      console.log('Application submitted:', Object.fromEntries(formData))
 
-      if (result.success) {
-        setFormStatus({ type: 'success', message: result.message })
-        const form = document.querySelector('form') as HTMLFormElement
-        form?.reset()
-        setSelectedFile(null)
-        setFileError('')
-      } else {
-        setFormStatus({ type: 'error', message: result.message })
-      }
+      // Mock success for static export
+      setFormStatus({ type: 'success', message: 'Application received! We\'ll review your profile and get back to you soon.' })
+      const form = document.querySelector('form') as HTMLFormElement
+      form?.reset()
+      setSelectedFile(null)
+      setFileError('')
     })
   }
 

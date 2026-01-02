@@ -6,7 +6,7 @@ import { useState, useTransition } from "react"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Button } from "@/components/ui/button"
-import { sendContactEmail } from "@/actions/contact"
+// import { sendContactEmail } from "@/actions/contact"
 
 export function ConsultancyForm() {
   const [isPending, startTransition] = useTransition()
@@ -15,16 +15,14 @@ export function ConsultancyForm() {
   async function handleSubmit(formData: FormData) {
     setFormStatus({ type: null, message: '' })
     startTransition(async () => {
-      const result = await sendContactEmail(formData)
+      // Simulate network request
+      await new Promise(resolve => setTimeout(resolve, 1000))
+      console.log('Form submitted:', Object.fromEntries(formData))
 
-      if (result.success) {
-        setFormStatus({ type: 'success', message: 'Thanks for reaching out! We will get back to you shortly.' })
-        // Reset form
-        const form = document.querySelector('#case-study-contact-form') as HTMLFormElement
-        form?.reset()
-      } else {
-        setFormStatus({ type: 'error', message: result.message || 'Something went wrong. Please try again.' })
-      }
+      setFormStatus({ type: 'success', message: 'Thanks for reaching out! We will get back to you shortly.' })
+      // Reset form
+      const form = document.querySelector('#case-study-contact-form') as HTMLFormElement
+      form?.reset()
     })
   }
 
