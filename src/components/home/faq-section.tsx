@@ -2,7 +2,8 @@
 
 import { useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
-import { Plus, Minus, HelpCircle } from "lucide-react"
+import { Plus, Minus, Search } from "lucide-react"
+import { Input } from "@/components/ui/input"
 
 const faqs = [
   {
@@ -28,88 +29,137 @@ const faqs = [
 ]
 
 export function FAQSection() {
-  const [openIndex, setOpenIndex] = useState<number | null>(0)
+  const [openIndex, setOpenIndex] = useState<number | null>(null)
+  const [searchQuery, setSearchQuery] = useState("")
+
+  const filteredFaqs = faqs.filter(faq =>
+    faq.question.toLowerCase().includes(searchQuery.toLowerCase()) ||
+    faq.answer.toLowerCase().includes(searchQuery.toLowerCase())
+  )
 
   return (
     <section className="relative w-full py-16 md:py-20 lg:py-24 bg-white overflow-hidden">
-        {/* Decorative elements */}
-      <div className="absolute -left-20 top-40 w-96 h-96 bg-brand-cyan/5 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute -right-20 bottom-20 w-80 h-80 bg-brand-deep/5 rounded-full blur-3xl pointer-events-none" />
+      {/* Decorative elements - Subtle dots for background pattern */}
+      <div className="absolute inset-0 bg-[radial-gradient(#06b6d4_1px,transparent_1px)] [background-size:20px_20px] opacity-[0.03] pointer-events-none" />
 
-      <div className="container relative z-10 px-4 mx-auto max-w-4xl">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="text-center mb-12 md:mb-16"
-        >
-          <div className="inline-flex items-center justify-center p-3 mb-6 rounded-full bg-brand-cyan/10 text-brand-cyan">
-            <HelpCircle className="w-6 h-6" />
-          </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-brand-dark mb-6">
-            Frequently Asked Questions
-          </h2>
-          <p className="text-lg text-slate-600">
-            Everything you need to know about working with Techsonance.
-          </p>
-        </motion.div>
+      <div className="container relative z-10 px-4 mx-auto max-w-7xl">
+        {/* Header Section */}
+        <div className="flex flex-col md:flex-row justify-between items-end gap-6 mb-12 md:mb-16 border-b border-gray-100 pb-8">
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            className="max-w-2xl"
+          >
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-brand-dark mb-4 leading-tight">
+              Frequently Asked <br />
+              <span className="text-brand-dark">Questions</span>
+            </h2>
+            <p className="text-lg text-slate-500 font-medium">
+              Everything you need to know about working with Techsonance.
+            </p>
+          </motion.div>
 
-        <div className="space-y-3 md:space-y-4">
-          {faqs.map((faq, index) => (
-            <FAQItem 
-              key={index} 
-              {...faq} 
-              index={index} 
+          {/* Search Bar */}
+          <motion.div
+            initial={{ opacity: 0, x: 20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            className="w-full md:w-80"
+          >
+            <div className="relative">
+              <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400" />
+              <Input
+                placeholder="Search questions..."
+                className="pl-10 h-12 rounded-xl border-slate-200 focus:border-brand-cyan focus:ring-brand-cyan bg-white"
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+              />
+            </div>
+          </motion.div>
+        </div>
+
+        {/* Grid Layout */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {filteredFaqs.map((faq, index) => (
+            <FAQItem
+              key={index}
+              {...faq}
+              index={index}
+              displayNumber={index + 1}
               isOpen={openIndex === index}
               onClick={() => setOpenIndex(openIndex === index ? null : index)}
             />
           ))}
         </div>
+
+        {filteredFaqs.length === 0 && (
+          <div className="text-center py-12 text-slate-500">
+            No questions found matching your search.
+          </div>
+        )}
       </div>
     </section>
   )
 }
 
-function FAQItem({ question, answer, index, isOpen, onClick }: { question: string, answer: string, index: number, isOpen: boolean, onClick: () => void }) {
+function FAQItem({
+  question,
+  answer,
+  index,
+  displayNumber,
+  isOpen,
+  onClick
+}: {
+  question: string,
+  answer: string,
+  index: number,
+  displayNumber: number,
+  isOpen: boolean,
+  onClick: () => void
+}) {
   return (
     <motion.div
       initial={{ opacity: 0, y: 10 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ delay: index * 0.1 }}
-      className={`border rounded-xl md:rounded-2xl overflow-hidden transition-all duration-300 ${
-        isOpen ? "border-brand-cyan/30 bg-brand-cyan/5 shadow-lg shadow-brand-cyan/5" : "border-slate-200 bg-white hover:border-brand-cyan/30"
-      }`}
+      className={`bg-white rounded-2xl border transition-all duration-300 ${isOpen
+          ? "border-brand-cyan/20 shadow-lg shadow-brand-cyan/5"
+          : "border-slate-100 shadow-sm hover:shadow-md hover:border-brand-cyan/20"
+        }`}
     >
       <button
         onClick={onClick}
-        className="w-full flex items-center justify-between p-4 md:p-5 lg:p-6 text-left focus:outline-none touch-target"
+        className="w-full flex items-start gap-4 p-6 text-left focus:outline-none touch-target"
       >
-        <span className={`text-base md:text-lg font-bold transition-colors ${isOpen ? "text-brand-dark" : "text-slate-700"}`}>
-          {question}
+        <span className="text-brand-cyan font-bold text-sm md:text-base mt-1">
+          {displayNumber.toString().padStart(2, '0')}
         </span>
-        <div className={`flex-shrink-0 ml-4 p-1 rounded-full border transition-all duration-300 ${
-            isOpen ? "bg-brand-cyan border-brand-cyan text-white rotate-180" : "bg-transparent border-slate-300 text-slate-500 hover:border-brand-cyan hover:text-brand-cyan"
-        }`}>
-            {isOpen ? <Minus className="w-5 h-5" /> : <Plus className="w-5 h-5" />}
+        <div className="flex-1">
+          <h3 className={`text-base md:text-lg font-bold transition-colors ${isOpen ? "text-brand-dark" : "text-slate-800"}`}>
+            {question}
+          </h3>
+          <AnimatePresence>
+            {isOpen && (
+              <motion.div
+                initial={{ height: 0, opacity: 0 }}
+                animate={{ height: "auto", opacity: 1 }}
+                exit={{ height: 0, opacity: 0 }}
+                transition={{ duration: 0.3 }}
+                className="overflow-hidden"
+              >
+                <p className="pt-3 text-slate-500 text-sm md:text-base leading-relaxed">
+                  {answer}
+                </p>
+              </motion.div>
+            )}
+          </AnimatePresence>
+        </div>
+        <div className={`flex-shrink-0 ml-2 transition-transform duration-300 text-brand-cyan ${isOpen ? "rotate-45" : "rotate-0"}`}>
+          <Plus className="w-5 h-5" />
         </div>
       </button>
-
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div
-            initial={{ height: 0, opacity: 0 }}
-            animate={{ height: "auto", opacity: 1 }}
-            exit={{ height: 0, opacity: 0 }}
-            transition={{ duration: 0.3 }}
-            className="overflow-hidden"
-          >
-            <div className="px-4 md:px-5 lg:px-6 pb-4 md:pb-5 lg:pb-6 pt-0 text-sm md:text-base text-slate-600 leading-relaxed border-t border-transparent">
-              {answer}
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
     </motion.div>
   )
 }

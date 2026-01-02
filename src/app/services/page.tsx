@@ -78,7 +78,7 @@ export default function ServicesPage() {
               className="relative h-[400px] sm:h-[500px] hidden lg:block"
             >
               {/* Central glow effect */}
-              <div className="absolute inset-0 bg-gradient-to-br from-brand-cyan/20 to-blue-500/20 rounded-full blur-3xl"></div>
+              <div className="absolute inset-0 bg-gradient-to-br from-brand-cyan/20 to-[#29619e]/20 rounded-full blur-3xl"></div>
 
               {/* Floating service icons in a circular pattern */}
               {servicesConfig.overview.services.map((service, index) => {
@@ -106,10 +106,10 @@ export default function ServicesPage() {
                   >
                     <div className="relative">
                       {/* Glow effect */}
-                      <div className="absolute inset-0 bg-gradient-to-br from-brand-cyan/30 to-blue-500/30 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                      <div className="absolute inset-0 bg-gradient-to-br from-brand-cyan/30 to-[#29619e]/30 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
 
                       {/* Icon container */}
-                      <div className="relative w-20 h-20 bg-gradient-to-br from-brand-cyan to-blue-600 rounded-2xl flex items-center justify-center shadow-2xl shadow-cyan-500/30 border-2 border-white/10 group-hover:scale-110 transition-transform duration-300">
+                      <div className="relative w-20 h-20 bg-gradient-to-br from-brand-cyan to-[#29619e] rounded-2xl flex items-center justify-center shadow-2xl shadow-cyan-500/30 border-2 border-white/10 group-hover:scale-110 transition-transform duration-300">
                         <service.icon className="w-10 h-10 text-white" />
                       </div>
 
@@ -132,12 +132,22 @@ export default function ServicesPage() {
                 className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
               >
                 <div className="relative">
-                  <div className="absolute inset-0 bg-gradient-to-br from-brand-cyan/40 to-blue-500/40 rounded-full blur-2xl animate-pulse"></div>
+                  <div className="absolute inset-0 bg-gradient-to-br from-brand-cyan/40 to-[#29619e]/40 rounded-full blur-2xl animate-pulse"></div>
                   <div className="relative w-32 h-32 bg-gradient-to-br from-white to-gray-100 rounded-full flex items-center justify-center shadow-2xl">
-                    <Sparkles className="w-16 h-16 text-brand-cyan" />
+                    <Sparkles className="w-16 h-16" style={{ stroke: 'url(#services-gradient)' }} />
                   </div>
                 </div>
               </motion.div>
+
+              {/* Local Gradient Definition for Services Page */}
+              <svg width="0" height="0" className="absolute w-0 h-0" aria-hidden="true">
+                <defs>
+                  <linearGradient id="services-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stopColor="#06b6d4" />
+                    <stop offset="100%" stopColor="#29619e" />
+                  </linearGradient>
+                </defs>
+              </svg>
 
               {/* Decorative connecting lines */}
               <svg className="absolute inset-0 w-full h-full opacity-20" style={{ pointerEvents: 'none' }}>
@@ -161,8 +171,8 @@ export default function ServicesPage() {
             className="text-center mb-16"
           >
             <span className="text-brand-cyan font-semibold text-sm uppercase tracking-wider mb-3 block">What We Offer</span>
-            <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-5">{servicesConfig.overview.title}</h2>
-            <div className="h-1.5 w-24 bg-gradient-to-r from-brand-cyan to-cyan-400 mx-auto rounded-full mb-6" />
+            <h2 className="text-4xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-brand-cyan to-[#29619e] mb-5">{servicesConfig.overview.title}</h2>
+            <div className="h-1.5 w-24 bg-gradient-to-r from-brand-cyan to-[#29619e] mx-auto rounded-full mb-6" />
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
               {servicesConfig.overview.intro}
             </p>
@@ -198,8 +208,8 @@ export default function ServicesPage() {
             className="text-center mb-20"
           >
             <span className="text-brand-cyan font-semibold text-sm uppercase tracking-wider mb-3 block">How We Work</span>
-            <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-5">{servicesConfig.process.title}</h2>
-            <div className="h-1.5 w-24 bg-gradient-to-r from-brand-cyan to-cyan-400 mx-auto rounded-full mb-6" />
+            <h2 className="text-4xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-brand-cyan to-[#29619e] mb-5">{servicesConfig.process.title}</h2>
+            <div className="h-1.5 w-24 bg-gradient-to-r from-brand-cyan to-[#29619e] mx-auto rounded-full mb-6" />
             <p className="text-lg text-gray-600 italic max-w-2xl mx-auto">{servicesConfig.process.microcopy}</p>
           </motion.div>
 
@@ -229,8 +239,8 @@ export default function ServicesPage() {
             className="text-center mb-16"
           >
             <span className="text-brand-cyan font-semibold text-sm uppercase tracking-wider mb-3 block">Why Us</span>
-            <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-5">{servicesConfig.whyChooseUs.title}</h2>
-            <div className="h-1.5 w-24 bg-gradient-to-r from-brand-cyan to-cyan-400 mx-auto rounded-full" />
+            <h2 className="text-4xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-brand-cyan to-[#29619e] mb-5">{servicesConfig.whyChooseUs.title}</h2>
+            <div className="h-1.5 w-24 bg-gradient-to-r from-brand-cyan to-[#29619e] mx-auto rounded-full" />
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -325,7 +335,7 @@ export default function ServicesPage() {
       </section>
 
       {/* Final CTA - Enhanced */}
-      <section className="py-20 bg-gradient-to-r from-brand-cyan to-cyan-500 text-white">
+      <section className="py-20 bg-gradient-to-r from-brand-cyan to-[#29619e] text-white">
         <div className="container mx-auto px-4 md:px-6 max-w-4xl text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -372,12 +382,12 @@ function ServiceCard({ id, icon: Icon, name, value, delay }: { id: string, icon:
           <div className="absolute top-0 right-0 w-32 h-32 bg-brand-cyan/5 rounded-full blur-2xl group-hover:bg-brand-cyan/10 transition-all duration-300" />
 
           <div className="relative z-10">
-            <div className="w-16 h-16 bg-gradient-to-br from-brand-cyan to-cyan-600 rounded-2xl flex items-center justify-center mb-5 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 shadow-lg shadow-brand-cyan/20">
+            <div className="w-16 h-16 bg-gradient-to-br from-brand-cyan to-[#29619e] rounded-2xl flex items-center justify-center mb-5 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 shadow-lg shadow-brand-cyan/20">
               <Icon className="w-8 h-8 text-white" />
             </div>
-            <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-brand-cyan transition-colors">{name}</h3>
+            <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-brand-cyan group-hover:to-[#29619e] transition-all duration-300">{name}</h3>
             <p className="text-gray-600 leading-relaxed mb-4">{value}</p>
-            <div className="flex items-center gap-2 text-brand-cyan text-sm font-semibold opacity-0 group-hover:opacity-100 transition-opacity">
+            <div className="flex items-center gap-2 text-transparent bg-clip-text bg-gradient-to-r from-brand-cyan to-[#29619e] text-sm font-bold opacity-0 group-hover:opacity-100 transition-opacity">
               <span>Learn more</span>
               <ArrowRight className="w-4 h-4" />
             </div>
@@ -404,8 +414,8 @@ function DetailedServiceSection({ service, index }: { service: any, index: numbe
       <div className="flex-1 space-y-6">
         <div>
           <span className="text-brand-cyan font-semibold text-sm uppercase tracking-wider mb-2 block">Service {index + 1}</span>
-          <h3 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-4">{service.name}</h3>
-          <div className="h-1 w-16 bg-gradient-to-r from-brand-cyan to-cyan-400 rounded-full mb-6" />
+          <h3 className="text-3xl md:text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-brand-cyan to-[#29619e] mb-4">{service.name}</h3>
+          <div className="h-1 w-16 bg-gradient-to-r from-brand-cyan to-[#29619e] rounded-full mb-6" />
           <p className="text-gray-600 text-lg leading-relaxed">{service.description}</p>
         </div>
 
@@ -442,7 +452,7 @@ function DetailedServiceSection({ service, index }: { service: any, index: numbe
           <div className="absolute bottom-10 left-10 w-40 h-40 bg-cyan-400/20 rounded-full blur-3xl group-hover:scale-150 transition-transform duration-500" style={{ transitionDelay: '100ms' }} />
 
           <div className="relative z-10">
-            <div className="w-32 h-32 bg-gradient-to-br from-brand-cyan to-cyan-600 rounded-3xl flex items-center justify-center shadow-2xl shadow-brand-cyan/30 group-hover:rotate-12 group-hover:scale-110 transition-all duration-500">
+            <div className="w-32 h-32 bg-gradient-to-br from-brand-cyan to-[#29619e] rounded-3xl flex items-center justify-center shadow-2xl shadow-brand-cyan/30 group-hover:rotate-12 group-hover:scale-110 transition-all duration-500">
               <span className="text-white font-black text-6xl">{service.name.charAt(0)}</span>
             </div>
           </div>
@@ -473,11 +483,11 @@ function ProcessStepTimeline({ number, title, description, delay, isLast }: { nu
 
             <div className="relative z-10">
               <div className="flex items-start gap-4 mb-4">
-                <div className="w-16 h-16 bg-gradient-to-br from-brand-cyan to-cyan-600 rounded-2xl flex items-center justify-center shadow-lg shadow-brand-cyan/30 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 flex-shrink-0">
+                <div className="w-16 h-16 bg-gradient-to-br from-brand-cyan to-[#29619e] rounded-2xl flex items-center justify-center shadow-lg shadow-brand-cyan/30 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 flex-shrink-0">
                   <span className="text-white font-black text-2xl">{number}</span>
                 </div>
                 <div className="flex-1">
-                  <h3 className="font-extrabold text-gray-900 text-2xl mb-2 group-hover:text-brand-cyan transition-colors">{title}</h3>
+                  <h3 className="font-extrabold text-gray-900 text-2xl mb-2 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-brand-cyan group-hover:to-[#29619e] transition-all duration-300">{title}</h3>
                   <p className="text-gray-600 leading-relaxed text-lg">{description}</p>
                 </div>
               </div>
@@ -492,7 +502,7 @@ function ProcessStepTimeline({ number, title, description, delay, isLast }: { nu
 
         {/* Center Timeline Dot */}
         <div className="hidden lg:flex flex-col items-center flex-shrink-0 relative z-10">
-          <div className="w-6 h-6 bg-gradient-to-br from-brand-cyan to-cyan-600 rounded-full shadow-lg shadow-brand-cyan/50 ring-4 ring-white" />
+          <div className="w-6 h-6 bg-gradient-to-br from-brand-cyan to-[#29619e] rounded-full shadow-lg shadow-brand-cyan/50 ring-4 ring-white" />
           {!isLast && (
             <div className="w-0.5 h-16 bg-gradient-to-b from-brand-cyan/50 to-transparent mt-2" />
           )}
@@ -534,10 +544,10 @@ function WhyChooseCard({ icon: Icon, text, delay }: { icon: any, text: string, d
           {/* Icon container with enhanced design */}
           <div className="relative mb-6">
             {/* Outer ring */}
-            <div className="absolute inset-0 bg-gradient-to-br from-brand-cyan/20 to-cyan-400/20 rounded-2xl blur-md group-hover:blur-lg transition-all duration-300" />
+            <div className="absolute inset-0 bg-gradient-to-br from-brand-cyan/20 to-[#29619e]/20 rounded-2xl blur-md group-hover:blur-lg transition-all duration-300" />
 
             {/* Icon box */}
-            <div className="relative w-20 h-20 bg-gradient-to-br from-brand-cyan to-cyan-600 rounded-2xl flex items-center justify-center shadow-xl shadow-brand-cyan/30 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300">
+            <div className="relative w-20 h-20 bg-gradient-to-br from-brand-cyan to-[#29619e] rounded-2xl flex items-center justify-center shadow-xl shadow-brand-cyan/30 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300">
               <Icon className="w-10 h-10 text-white" />
             </div>
 
@@ -546,12 +556,12 @@ function WhyChooseCard({ icon: Icon, text, delay }: { icon: any, text: string, d
           </div>
 
           {/* Text content */}
-          <p className="text-gray-800 font-bold text-xl leading-relaxed group-hover:text-brand-cyan transition-colors duration-300">
+          <p className="text-gray-800 font-bold text-xl leading-relaxed group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-brand-cyan group-hover:to-[#29619e] transition-all duration-300">
             {text}
           </p>
 
           {/* Bottom accent line */}
-          <div className="mt-6 w-0 h-1 bg-gradient-to-r from-brand-cyan to-cyan-400 rounded-full group-hover:w-full transition-all duration-500" />
+          <div className="mt-6 w-0 h-1 bg-gradient-to-r from-brand-cyan to-[#29619e] rounded-full group-hover:w-full transition-all duration-500" />
         </div>
       </div>
     </motion.div>
