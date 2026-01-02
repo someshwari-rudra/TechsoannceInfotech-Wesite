@@ -1,0 +1,7 @@
+{
+    "name": "techsonance-website",
+    "compatibility_date": "2024-04-05",
+    "assets": {
+        "directory": "./out"
+    }
+}
