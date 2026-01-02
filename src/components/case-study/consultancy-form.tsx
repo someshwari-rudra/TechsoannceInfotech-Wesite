@@ -15,23 +15,23 @@ export function ConsultancyForm() {
   async function handleSubmit(formData: FormData) {
     setFormStatus({ type: null, message: '' })
     startTransition(async () => {
-       const result = await sendContactEmail(formData)
-       
-       if (result.success) {
-         setFormStatus({ type: 'success', message: 'Thanks for reaching out! We will get back to you shortly.' })
-         // Reset form
-         const form = document.querySelector('#case-study-contact-form') as HTMLFormElement
-         form?.reset()
-       } else {
-         setFormStatus({ type: 'error', message: result.message || 'Something went wrong. Please try again.' })
-       }
+      const result = await sendContactEmail(formData)
+
+      if (result.success) {
+        setFormStatus({ type: 'success', message: 'Thanks for reaching out! We will get back to you shortly.' })
+        // Reset form
+        const form = document.querySelector('#case-study-contact-form') as HTMLFormElement
+        form?.reset()
+      } else {
+        setFormStatus({ type: 'error', message: result.message || 'Something went wrong. Please try again.' })
+      }
     })
   }
 
   return (
     <div className="w-full">
       {formStatus.type === 'success' ? (
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           className="text-center py-12"
@@ -47,7 +47,7 @@ export function ConsultancyForm() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="space-y-2">
               <label className="text-xs md:text-sm font-semibold text-slate-300 ml-1">Full Name</label>
-              <Input 
+              <Input
                 name="name"
                 placeholder="John Doe"
                 className="h-12 md:h-14 bg-white/5 border-white/10 text-white placeholder:text-slate-600 focus:border-brand-cyan/50 focus:ring-brand-cyan/20 rounded-xl text-sm md:text-base"
@@ -56,7 +56,7 @@ export function ConsultancyForm() {
             </div>
             <div className="space-y-2">
               <label className="text-xs md:text-sm font-semibold text-slate-300 ml-1">Email Address</label>
-              <Input 
+              <Input
                 name="email"
                 type="email"
                 placeholder="john@example.com"
@@ -68,7 +68,7 @@ export function ConsultancyForm() {
 
           <div className="space-y-2">
             <label className="text-xs md:text-sm font-semibold text-slate-300 ml-1">Phone Number (Optional)</label>
-            <Input 
+            <Input
               name="phone"
               placeholder="+1 (555) 000-0000"
               className="h-12 md:h-14 bg-white/5 border-white/10 text-white placeholder:text-slate-600 focus:border-brand-cyan/50 focus:ring-brand-cyan/20 rounded-xl text-sm md:text-base"
@@ -77,7 +77,7 @@ export function ConsultancyForm() {
 
           <div className="space-y-2">
             <label className="text-xs md:text-sm font-semibold text-slate-300 ml-1">Project Details</label>
-            <Textarea 
+            <Textarea
               name="message"
               placeholder="Tell us about your goals, timeline, and requirements..."
               className="min-h-[140px] md:min-h-[160px] bg-white/5 border-white/10 text-white placeholder:text-slate-600 focus:border-brand-cyan/50 focus:ring-brand-cyan/20 rounded-xl resize-none text-sm md:text-base"
@@ -91,9 +91,9 @@ export function ConsultancyForm() {
             </div>
           )}
 
-          <Button 
+          <Button
             disabled={isPending}
-            className="w-full h-14 md:h-16 bg-gradient-to-r from-brand-cyan to-cyan-600 hover:from-cyan-500 hover:to-cyan-700 text-white font-bold text-lg md:text-xl rounded-xl shadow-xl shadow-brand-cyan/20 transition-all duration-300 flex items-center justify-center gap-3 group"
+            className="w-full h-14 md:h-16 bg-gradient-to-r from-brand-cyan to-[#29619e] hover:scale-[1.02] text-white font-bold text-lg md:text-xl rounded-xl shadow-xl shadow-brand-cyan/20 transition-all duration-300 flex items-center justify-center gap-3 group"
           >
             {isPending ? (
               <>

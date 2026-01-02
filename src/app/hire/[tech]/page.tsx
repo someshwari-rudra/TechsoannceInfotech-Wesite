@@ -83,7 +83,7 @@ export default function HireTechPage() {
                     form.scrollIntoView({ behavior: 'smooth', block: 'center' });
                   }
                 }}
-                className="px-6 py-3.5 bg-brand-cyan text-white font-semibold rounded-lg shadow-md hover:bg-cyan-600 transition-all duration-200 hover:shadow-lg"
+                className="px-6 py-3.5 bg-gradient-to-r from-brand-cyan to-[#29619e] text-white font-semibold rounded-lg shadow-md hover:scale-105 transition-all duration-200 hover:shadow-lg shadow-cyan-500/20"
               >
                 Start 15 Days 100% FREE Trial
               </button>
@@ -142,7 +142,7 @@ export default function HireTechPage() {
 
                 <Button
                   disabled={isPending}
-                  className="w-full h-12 bg-brand-cyan hover:bg-cyan-600 text-white font-semibold text-base rounded-lg shadow-md transition-all duration-200"
+                  className="w-full h-12 bg-gradient-to-r from-brand-cyan to-[#29619e] hover:scale-105 text-white font-semibold text-base rounded-lg shadow-md transition-all duration-200 shadow-cyan-500/20"
                 >
                   {isPending ? <Loader2 className="w-5 h-5 animate-spin mr-2" /> : null}
                   {isPending ? "Sending..." : "Get FREE Expert Consultation"}
@@ -184,7 +184,7 @@ export default function HireTechPage() {
                 form.scrollIntoView({ behavior: 'smooth', block: 'center' });
               }
             }}
-            className="bg-brand-cyan hover:bg-cyan-600 text-white font-semibold py-3.5 px-8 text-base rounded-lg shadow-md relative z-10 transition-all duration-200 hover:shadow-lg hover:-translate-y-0.5"
+            className="bg-gradient-to-r from-brand-cyan to-[#29619e] hover:scale-105 text-white font-semibold py-3.5 px-8 text-base rounded-lg shadow-md relative z-10 transition-all duration-200 hover:shadow-lg shadow-cyan-500/20 hover:-translate-y-0.5"
           >
             Hire Us
           </button>

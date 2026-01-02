@@ -43,7 +43,7 @@ export function ConsultancyForm({ serviceName }: { serviceName: string }) {
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-32 bg-brand-cyan/20 blur-[60px] rounded-full pointing-events-none" />
 
         <div className="relative">
-          <div className="w-20 h-20 bg-gradient-to-tr from-brand-cyan to-brand-deep rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg shadow-cyan-500/30">
+          <div className="w-20 h-20 bg-gradient-to-tr from-brand-cyan to-[#29619e] rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg shadow-cyan-500/30">
             <CheckCircle2 className="w-10 h-10 text-white" />
           </div>
 
@@ -133,7 +133,7 @@ export function ConsultancyForm({ serviceName }: { serviceName: string }) {
           <button
             type="submit"
             disabled={status === "loading"}
-            className="w-full py-4 bg-gradient-to-r from-brand-cyan to-brand-deep rounded-xl text-white font-bold text-lg shadow-lg shadow-brand-cyan/20 hover:shadow-brand-cyan/30 hover:scale-[1.01] active:scale-[0.99] transition-all disabled:opacity-70 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+            className="w-full py-4 bg-gradient-to-r from-brand-cyan to-[#29619e] rounded-xl text-white font-bold text-lg shadow-lg shadow-brand-cyan/20 hover:shadow-brand-cyan/30 hover:scale-[1.01] active:scale-[0.99] transition-all disabled:opacity-70 disabled:cursor-not-allowed flex items-center justify-center gap-2"
           >
             {status === "loading" ? (
               <>

@@ -18,7 +18,7 @@ const config: Config = {
         sm: "calc(var(--radius) - 4px)"
       },
       colors: {
-        "brand-cyan": "#00C2FF",
+        "brand-cyan": "#06b6d4",
         "brand-dark": "#0A1A2F",
         "brand-deep": "#141d2f",
         background: "hsl(var(--background))",

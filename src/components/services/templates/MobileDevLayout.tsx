@@ -40,7 +40,7 @@ export function MobileDevLayout({ service }: { service: ServiceData }) {
                                 {service.shortDescription}
                             </p>
                             <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-                                <a href="#contact" className="px-8 py-4 bg-brand-cyan hover:bg-cyan-500 text-[#0A1A2F] font-bold rounded-2xl transition-all shadow-lg shadow-cyan-500/20">
+                                <a href="#contact" className="px-8 py-4 bg-gradient-to-r from-brand-cyan to-[#29619e] text-white font-bold rounded-2xl transition-all shadow-lg shadow-cyan-500/20 hover:scale-105">
                                     Start Building
                                 </a>
                             </div>
@@ -104,19 +104,19 @@ export function MobileDevLayout({ service }: { service: ServiceData }) {
                         <div className="grid grid-cols-2 gap-4">
                             {/* Decorative Stats Cards */}
                             <div className="p-6 bg-white rounded-3xl shadow-lg shadow-cyan-100 border border-slate-100">
-                                <div className="text-3xl font-bold text-brand-cyan mb-1">4.8</div>
+                                <div className="text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-brand-cyan to-[#29619e] mb-1">4.8</div>
                                 <div className="text-sm font-semibold text-slate-500">App Store Rating</div>
                             </div>
                             <div className="p-6 bg-white rounded-3xl shadow-lg shadow-blue-100 border border-slate-100 mt-8">
-                                <div className="text-3xl font-bold text-blue-600 mb-1">99%</div>
+                                <div className="text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-brand-cyan to-[#29619e] mb-1">99%</div>
                                 <div className="text-sm font-semibold text-slate-500">Crash-Free Users</div>
                             </div>
                             <div className="p-6 bg-[#0A1A2F] rounded-3xl shadow-xl text-white">
-                                <Lock className="w-8 h-8 text-brand-cyan mb-4" />
+                                <Lock className="w-8 h-8 mb-4 text-brand-cyan" /> {/* Keep solid on dark bg */}
                                 <div className="text-sm font-semibold text-slate-300">Biometric<br />Security</div>
                             </div>
-                            <div className="p-6 bg-cyan-50 rounded-3xl border border-cyan-100 mt-8">
-                                <Fingerprint className="w-8 h-8 text-brand-cyan mb-4" />
+                            <div className="p-6 bg-white rounded-3xl border border-brand-cyan/20 mt-8 shadow-sm">
+                                <Fingerprint className="w-8 h-8 mb-4" style={{ stroke: 'url(#icon-gradient)' }} />
                                 <div className="text-sm font-semibold text-cyan-900">TouchID<br />Ready</div>
                             </div>
                         </div>
@@ -126,8 +126,8 @@ export function MobileDevLayout({ service }: { service: ServiceData }) {
                     <div className="grid md:grid-cols-4 gap-6">
                         {service.features.map((feature, i) => (
                             <div key={i} className="bg-white p-6 rounded-3xl border border-slate-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group">
-                                <div className="w-12 h-12 bg-slate-50 rounded-2xl flex items-center justify-center text-[#0A1A2F] mb-4 group-hover:bg-brand-cyan group-hover:text-[#0A1A2F] transition-colors">
-                                    <feature.icon className="w-6 h-6" />
+                                <div className="w-12 h-12 bg-white border border-brand-cyan/20 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-105 transition-transform shadow-sm">
+                                    <feature.icon className="w-6 h-6" style={{ stroke: 'url(#icon-gradient)' }} />
                                 </div>
                                 <h3 className="font-bold text-lg text-[#0A1A2F] mb-2">{feature.title}</h3>
                                 <p className="text-sm text-slate-500 leading-relaxed">{feature.description}</p>

@@ -28,7 +28,7 @@ export function CloudDevOpsLayout({ service }: { service: ServiceData }) {
                <div className="grid md:grid-cols-2 gap-16 items-center">
                   <div>
                      <div className="inline-flex items-center gap-2 px-3 py-1 rounded border border-brand-cyan/30 bg-brand-cyan/10 text-brand-cyan text-xs font-mono mb-6">
-                        <Terminal className="w-3 h-3" />
+                        <Terminal className="w-3 h-3" style={{ stroke: 'url(#icon-gradient)' }} />
                         <span>Cycle_Time: Reduced</span>
                      </div>
                      <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight tracking-tight">
@@ -41,7 +41,7 @@ export function CloudDevOpsLayout({ service }: { service: ServiceData }) {
                         {service.shortDescription}
                      </p>
                      <div className="flex gap-4">
-                        <a href="#contact" className="px-6 py-3 bg-brand-cyan hover:bg-cyan-500 text-[#0A1A2F] font-bold rounded-lg transition-colors flex items-center gap-2 shadow-lg shadow-cyan-500/20">
+                        <a href="#contact" className="px-6 py-3 bg-gradient-to-r from-brand-cyan to-[#29619e] text-white font-bold rounded-lg hover:scale-105 transition-all flex items-center gap-2 shadow-lg shadow-cyan-500/20">
                            <Server className="w-4 h-4" />
                            Optimize Infrastructure
                         </a>
@@ -89,8 +89,8 @@ export function CloudDevOpsLayout({ service }: { service: ServiceData }) {
                <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
                   {service.features.map((feature, i) => (
                      <div key={i} className="bg-white dark:bg-white/5 border border-slate-200 dark:border-white/10 rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 group">
-                        <div className="w-12 h-12 bg-cyan-50 dark:bg-white/10 rounded-lg flex items-center justify-center text-brand-cyan mb-4 group-hover:bg-brand-cyan group-hover:text-[#0A1A2F] transition-colors">
-                           <feature.icon className="w-6 h-6" />
+                        <div className="w-12 h-12 bg-white dark:bg-white/10 border border-brand-cyan/20 rounded-lg flex items-center justify-center mb-4 group-hover:scale-105 transition-transform shadow-sm">
+                           <feature.icon className="w-6 h-6" style={{ stroke: 'url(#icon-gradient)' }} />
                         </div>
                         <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2">{feature.title}</h3>
                         <p className="text-sm text-slate-500 dark:text-slate-400 leading-relaxed border-l-2 border-slate-200 dark:border-slate-700 pl-3">
@@ -106,7 +106,7 @@ export function CloudDevOpsLayout({ service }: { service: ServiceData }) {
          <section className="py-24 px-6 bg-slate-50 dark:bg-[#0F172A]/50">
             <div className="container mx-auto max-w-5xl">
                <h2 className="text-3xl font-bold text-slate-900 dark:text-white mb-12 flex items-center gap-3">
-                  <Activity className="text-brand-cyan w-8 h-8" />
+                  <Activity className="w-8 h-8" style={{ stroke: 'url(#icon-gradient)' }} />
                   DevOps Workflow
                </h2>
 

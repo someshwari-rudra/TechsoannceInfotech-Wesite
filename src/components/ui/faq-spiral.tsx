@@ -6,6 +6,7 @@ export default function FAQWithSpiral() {
     const spiralRef = useRef<HTMLDivElement | null>(null);
     const [panelOpen, setPanelOpen] = useState(false);
     const [query, setQuery] = useState("");
+    const [openIndex, setOpenIndex] = useState<number | null>(null);
 
     // Spiral configuration - customized for light theme with brand colors
     const [cfg, setCfg] = useState({
@@ -242,11 +243,22 @@ export default function FAQWithSpiral() {
                     </div>
                 </header>
 
+
+
+
+
                 {/* Content */}
                 <section className="relative">
                     <div className="grid grid-cols-1 gap-3 md:grid-cols-2">
                         {filtered.map((item, i) => (
-                            <FAQItem key={i} q={item.q} a={item.a} index={i + 1} />
+                            <FAQItem
+                                key={item.q}
+                                q={item.q}
+                                a={item.a}
+                                index={i + 1}
+                                isOpen={openIndex === i}
+                                onToggle={() => setOpenIndex(prev => prev === i ? null : i)}
+                            />
                         ))}
                     </div>
                 </section>
@@ -304,23 +316,23 @@ export default function FAQWithSpiral() {
     );
 }
 
-function FAQItem({ q, a, index }: { q: string; a: string; index: number }) {
-    const [open, setOpen] = useState(false);
+
+function FAQItem({ q, a, index, isOpen, onToggle }: { q: string; a: string; index: number; isOpen: boolean; onToggle: () => void }) {
     return (
         <div className="group relative overflow-hidden rounded-2xl border border-slate-200 bg-white p-5 transition hover:border-brand-cyan hover:shadow-lg">
             <button
-                onClick={() => setOpen((v) => !v)}
+                onClick={onToggle}
                 className="flex w-full items-center justify-between text-left"
-                aria-expanded={open}
+                aria-expanded={isOpen}
             >
                 <div className="flex items-baseline gap-3">
                     <span className="text-xs text-brand-cyan font-semibold">{String(index).padStart(2, "0")}</span>
                     <h3 className="text-base md:text-lg font-semibold leading-tight text-brand-dark">{q}</h3>
                 </div>
-                <span className="ml-4 text-brand-cyan transition group-hover:scale-110">{open ? "–" : "+"}</span>
+                <span className={`ml-4 text-brand-cyan transition duration-300 ${isOpen ? "rotate-45" : ""}`}>+</span>
             </button>
             <div
-                className={`grid transition-[grid-template-rows] duration-300 ease-[cubic-bezier(.4,0,.2,1)] ${open ? "mt-3 grid-rows-[1fr]" : "grid-rows-[0fr]"}`}
+                className={`grid transition-[grid-template-rows] duration-300 ease-[cubic-bezier(.4,0,.2,1)] ${isOpen ? "mt-3 grid-rows-[1fr]" : "grid-rows-[0fr]"}`}
             >
                 <div className="min-h-0 overflow-hidden">
                     <p className="text-sm text-slate-600">{a}</p>

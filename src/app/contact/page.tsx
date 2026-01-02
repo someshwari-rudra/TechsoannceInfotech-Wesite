@@ -33,10 +33,15 @@ export default function ContactPage() {
     <div className="min-h-screen bg-gray-50">
 
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-brand-dark via-brand-deep to-brand-dark text-white py-20 md:py-28 overflow-hidden">
-        <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10" />
-        <div className="absolute top-20 right-10 w-72 h-72 bg-brand-cyan/20 rounded-full blur-3xl" />
-        <div className="absolute bottom-10 left-10 w-96 h-96 bg-brand-cyan/10 rounded-full blur-3xl" />
+      <section className="relative bg-brand-dark text-white py-20 md:py-28 overflow-hidden">
+        {/* Background Layers */}
+        <div className="absolute inset-0 z-0">
+          <div className="absolute inset-0 bg-[url('/contact_hero_bg.png')] bg-cover bg-center bg-no-repeat opacity-40 mix-blend-luminosity" />
+          <div className="absolute inset-0 bg-gradient-to-b from-brand-dark/90 via-brand-dark/80 to-brand-dark/95" />
+          <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10 mix-blend-overlay" />
+        </div>
+        <div className="absolute top-20 right-10 w-72 h-72 bg-brand-cyan/20 rounded-full blur-3xl z-0" />
+        <div className="absolute bottom-10 left-10 w-96 h-96 bg-brand-cyan/10 rounded-full blur-3xl z-0" />
 
         <div className="container mx-auto px-4 md:px-6 max-w-4xl relative z-10">
           <motion.div
@@ -46,7 +51,7 @@ export default function ContactPage() {
             className="text-center"
           >
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-6 leading-tight">
-              {contactConfig.hero.title.split('Powerful Together')[0]}<span className="text-brand-cyan">Powerful Together</span>
+              {contactConfig.hero.title.split('Powerful Together')[0]}<span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-cyan to-[#29619e]">Powerful Together</span>
             </h1>
 
             <p className="text-lg md:text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
@@ -55,7 +60,7 @@ export default function ContactPage() {
 
             <div className="flex flex-wrap gap-4 justify-center">
               <a href={contactConfig.hero.primaryCTA.href}>
-                <Button className="px-8 py-6 bg-brand-cyan hover:bg-cyan-600 text-white font-semibold text-lg rounded-lg shadow-lg transition-all duration-200">
+                <Button className="px-8 py-6 bg-gradient-to-r from-brand-cyan to-[#29619e] hover:scale-105 transition-all duration-300 shadow-lg shadow-brand-cyan/20 text-white font-semibold text-lg rounded-lg">
                   {contactConfig.hero.primaryCTA.text}
                 </Button>
               </a>
@@ -82,7 +87,7 @@ export default function ContactPage() {
               id="contact-form"
             >
               <div className="bg-white p-6 sm:p-8 md:p-10 rounded-2xl shadow-xl">
-                <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3">{contactConfig.form.title}</h2>
+                <h2 className="text-2xl sm:text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-brand-cyan to-[#29619e] mb-3">{contactConfig.form.title}</h2>
                 <p className="text-gray-600 mb-6 sm:mb-8">
                   {contactConfig.form.description}
                 </p>
@@ -188,7 +193,7 @@ export default function ContactPage() {
 
                     <Button
                       disabled={isPending}
-                      className="w-full h-14 bg-brand-cyan hover:bg-cyan-600 text-white font-semibold text-lg rounded-lg shadow-md transition-all duration-200"
+                      className="w-full h-14 bg-gradient-to-r from-brand-cyan to-[#29619e] hover:scale-105 transition-all duration-300 shadow-md shadow-brand-cyan/20 text-white font-semibold text-lg rounded-lg"
                     >
                       {isPending ? (
                         <>
@@ -218,7 +223,7 @@ export default function ContactPage() {
             >
               {/* Alternative Contact Options */}
               <div className="bg-white p-6 sm:p-8 rounded-2xl shadow-lg">
-                <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4 sm:mb-6">{contactConfig.contactOptions.title}</h3>
+                <h3 className="text-xl sm:text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-brand-cyan to-[#29619e] mb-4 sm:mb-6">{contactConfig.contactOptions.title}</h3>
 
                 <div className="space-y-5">
                   {contactConfig.contactOptions.options.map((option, index) => (
@@ -234,8 +239,8 @@ export default function ContactPage() {
               </div>
 
               {/* Why Contact Us */}
-              <div className="bg-gradient-to-br from-brand-cyan/5 to-cyan-50/50 p-6 sm:p-8 rounded-2xl border border-brand-cyan/20">
-                <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4 sm:mb-6">{contactConfig.whyChooseUs.title}</h3>
+              <div className="bg-white p-6 sm:p-8 rounded-2xl shadow-lg border border-gray-200">
+                <h3 className="text-xl sm:text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-brand-cyan to-[#29619e] mb-4 sm:mb-6">{contactConfig.whyChooseUs.title}</h3>
 
                 <div className="space-y-4">
                   {contactConfig.whyChooseUs.points.map((point, index) => (
@@ -246,11 +251,11 @@ export default function ContactPage() {
             </motion.div>
 
           </div>
-        </div>
-      </section>
+        </div >
+      </section >
 
       {/* Final CTA Strip */}
-      <section className="py-16 bg-gradient-to-r from-brand-dark to-brand-deep text-white">
+      < section className="py-16 bg-gradient-to-r from-brand-dark to-[#29619e] text-white" >
         <div className="container mx-auto px-4 md:px-6 max-w-4xl text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -262,7 +267,7 @@ export default function ContactPage() {
             </h2>
 
             <a href={contactConfig.finalCTA.href}>
-              <Button className="px-10 py-6 bg-brand-cyan hover:bg-cyan-600 text-white font-semibold text-lg rounded-lg shadow-lg transition-all duration-200 hover:shadow-xl hover:-translate-y-1">
+              <Button className="px-10 py-6 bg-gradient-to-r from-brand-cyan to-[#29619e] hover:scale-105 transition-all duration-300 shadow-lg shadow-brand-cyan/20 text-white font-semibold text-lg rounded-lg">
                 {contactConfig.finalCTA.buttonText}
               </Button>
             </a>
@@ -272,9 +277,9 @@ export default function ContactPage() {
             </p>
           </motion.div>
         </div>
-      </section>
+      </section >
 
-    </div>
+    </div >
   )
 }
 
@@ -282,7 +287,7 @@ function ContactOption({ icon: Icon, title, value, href }: { icon: any, title: s
   const content = (
     <div className="flex items-start gap-4 p-4 rounded-lg hover:bg-gray-50 transition-colors">
       <div className="w-12 h-12 bg-brand-cyan/10 rounded-full flex items-center justify-center flex-shrink-0">
-        <Icon className="w-6 h-6 text-brand-cyan" />
+        <Icon className="w-6 h-6" style={{ stroke: 'url(#icon-gradient)' }} />
       </div>
       <div className="flex-1 text-left">
         <p className="font-semibold text-gray-900 mb-1">{title}</p>
@@ -300,11 +305,11 @@ function ContactOption({ icon: Icon, title, value, href }: { icon: any, title: s
 
 function WhyItem({ text }: { text: string }) {
   return (
-    <div className="flex items-center gap-3">
-      <div className="w-6 h-6 rounded-full bg-brand-cyan flex items-center justify-center flex-shrink-0">
-        <CheckCircle2 className="w-4 h-4 text-white" />
+    <div className="flex items-center gap-4 group p-3 rounded-lg hover:bg-brand-cyan/5 transition-colors duration-300">
+      <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-brand-cyan/10 to-brand-cyan/5 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+        <CheckCircle2 className="w-5 h-5 text-brand-cyan" style={{ stroke: 'url(#icon-gradient)' }} />
       </div>
-      <span className="text-gray-700 font-medium">{text}</span>
+      <span className="text-gray-700 font-medium group-hover:text-brand-cyan transition-colors duration-300">{text}</span>
     </div>
   )
 }

@@ -227,7 +227,7 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
     } else if (slug === 'lms-platform') {
       return { label1: 'HLS Streaming', color1: 'indigo', title1: '10k+ Users', subtitle1: 'ZERO BUFFERING', label2: 'Analytics', title2: 'Real-time Insights', bgColor: 'from-indigo-600 to-purple-600' }
     }
-    return { label1: 'React Powered', color1: 'blue', title1: 'Vite Build', subtitle1: 'SUB-SECOND HMR', label2: 'TypeScript', title2: '100% Type Safe', bgColor: 'from-brand-dark to-brand-deep' }
+    return { label1: 'React Powered', color1: 'blue', title1: 'Vite Build', subtitle1: 'SUB-SECOND HMR', label2: 'TypeScript', title2: '100% Type Safe', bgColor: 'from-brand-dark to-[#29619e]' }
   }
   const cards = getFloatingCards()
 
@@ -251,7 +251,7 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
                 {data.description}
               </p>
               <div className="flex gap-4 pt-4">
-                <Link href="#consultancy-section" className="px-8 py-3 bg-gradient-to-r from-brand-dark to-[#00A9E0] text-white font-semibold rounded-lg hover:shadow-xl hover:shadow-brand-cyan/20 transition-all shadow-lg shadow-brand-dark/10">
+                <Link href="#consultancy-section" className="px-8 py-3 bg-gradient-to-r from-brand-cyan to-[#29619e] text-white font-bold rounded-lg hover:scale-105 transition-all duration-300 shadow-lg shadow-cyan-500/20">
                   Estimate Project
                 </Link>
                 <Link href="/contact" className="px-8 py-3 bg-white text-brand-dark border border-slate-200 font-semibold rounded-lg hover:border-brand-dark transition-colors">
@@ -475,7 +475,7 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
                   </div>
                   <h4 className="font-bold text-3xl mb-4">Ready to Start?</h4>
                   <p className="text-slate-300 mb-10 text-lg">Join the roadmap to digital transformation with a team that actually cares about your growth.</p>
-                  <Link href="#consultancy-section" className="inline-block px-12 py-5 bg-white text-brand-dark font-bold text-xl rounded-full hover:bg-brand-cyan hover:text-white transition-all shadow-xl hover:scale-105 active:scale-95 border-2 border-transparent hover:border-white/50">
+                  <Link href="#consultancy-section" className="inline-block px-12 py-5 bg-gradient-to-r from-brand-cyan to-[#29619e] text-white font-bold text-xl rounded-full hover:scale-105 transition-all duration-300 shadow-xl shadow-cyan-500/20 border-2 border-transparent">
                     Let's Talk Business
                   </Link>
                 </div>

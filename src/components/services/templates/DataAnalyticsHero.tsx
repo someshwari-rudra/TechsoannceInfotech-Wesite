@@ -61,7 +61,7 @@ export function DataAnalyticsHero({ shortDescription }: DataAnalyticsHeroProps) 
                   variants={staggerContainer}
                >
                   <motion.div variants={fadeInUp} className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-cyan-50 text-brand-cyan text-xs font-bold uppercase mb-8 border border-cyan-100">
-                     <BarChart3 className="w-4 h-4" />
+                     <BarChart3 className="w-4 h-4" style={{ stroke: 'url(#icon-gradient)' }} />
                      Data Intelligence
                   </motion.div>
                   <motion.h1 variants={fadeInUp} className="text-4xl md:text-6xl font-bold text-slate-900 mb-6 leading-tight">
@@ -75,7 +75,7 @@ export function DataAnalyticsHero({ shortDescription }: DataAnalyticsHeroProps) 
                      {shortDescription}
                   </motion.p>
                   <motion.div variants={fadeInUp} className="flex flex-col sm:flex-row gap-4">
-                     <a href="#contact" className="px-8 py-4 bg-[#0A1A2F] text-white font-medium rounded-xl hover:bg-slate-800 transition-all flex items-center justify-center gap-2 shadow-lg shadow-blue-900/20 group">
+                     <a href="#contact" className="px-8 py-4 bg-gradient-to-r from-brand-cyan to-[#29619e] text-white font-medium rounded-xl hover:scale-105 transition-all flex items-center justify-center gap-2 shadow-lg shadow-cyan-500/20 group">
                         Get Insights
                         <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                      </a>
@@ -97,7 +97,7 @@ export function DataAnalyticsHero({ shortDescription }: DataAnalyticsHeroProps) 
                      <div className="flex justify-between items-center mb-6">
                         <div>
                            <div className="text-sm text-slate-400 font-medium">Monthly Revenue</div>
-                           <div className="text-3xl font-bold text-slate-900">$124,500</div>
+                           <div className="text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-brand-cyan to-[#29619e]">$124,500</div>
                         </div>
                         <div className="bg-emerald-50 text-emerald-600 px-2 py-1 rounded text-sm font-bold flex items-center gap-1">
                            <TrendingUp className="w-3 h-3" /> +12%
@@ -133,8 +133,8 @@ export function DataAnalyticsHero({ shortDescription }: DataAnalyticsHeroProps) 
                      whileHover={{ scale: 1.05 }}
                      className="absolute bottom-20 left-0 bg-[#0A1A2F] text-white p-6 rounded-3xl shadow-2xl shadow-blue-900/30 z-30 flex items-center gap-4"
                   >
-                     <div className="bg-white/10 p-3 rounded-xl">
-                        <Database className="w-6 h-6 text-brand-cyan" />
+                     <div className="bg-white/10 p-3 rounded-xl border border-brand-cyan/30">
+                        <Database className="w-6 h-6" style={{ stroke: 'url(#icon-gradient)' }} />
                      </div>
                      <div>
                         <div className="font-bold">Real-time Sync</div>

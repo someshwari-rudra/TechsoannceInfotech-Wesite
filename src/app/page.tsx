@@ -3,7 +3,7 @@ import { Hero } from "@/components/hero/hero";
 import { ServicesSection } from "@/components/services/services-section";
 import { WhyChooseUs } from "@/components/home/why-choose-us";
 import { CaseStudies } from "@/components/home/case-studies";
-import FAQWithSpiral from "@/components/ui/faq-section";
+import FAQWithSpiral from "@/components/ui/faq-spiral";
 import { ConsultancyForm } from "@/components/case-study/consultancy-form";
 import { CheckCircle2, Sparkles } from "lucide-react";
 

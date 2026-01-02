@@ -259,7 +259,7 @@ export default function PricingPage() {
                                     <Link
                                         href="/contact"
                                         className={`w-full py-3 px-4 rounded-xl font-semibold text-center transition-all duration-200 flex items-center justify-center gap-2 text-sm ${plan.popular
-                                            ? 'bg-gradient-to-r from-brand-cyan to-blue-600 text-white hover:shadow-lg hover:shadow-cyan-500/30'
+                                            ? 'bg-gradient-to-r from-brand-cyan to-[#29619e] text-white hover:shadow-lg hover:shadow-cyan-500/30'
                                             : 'bg-slate-100 text-slate-900 hover:bg-slate-200'
                                             }`}
                                     >
