@@ -6,7 +6,7 @@ import { useState, useTransition } from "react"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Button } from "@/components/ui/button"
-// import { sendContactEmail } from "@/actions/contact"
+import { sendContactEmail } from "@/actions/contact"
 import { contactConfig } from "@/config/contact-config"
 
 export default function ContactPage() {
@@ -16,14 +16,16 @@ export default function ContactPage() {
   async function handleSubmit(formData: FormData) {
     setFormStatus({ type: null, message: '' })
     startTransition(async () => {
-      // Simulate network request
-      await new Promise(resolve => setTimeout(resolve, 1000))
-      console.log('Contact form submitted:', Object.fromEntries(formData))
+      const result = await sendContactEmail(formData)
 
-      // Mock success for static export
-      setFormStatus({ type: 'success', message: contactConfig.form.successMessage })
-      const form = document.querySelector('form') as HTMLFormElement
-      form?.reset()
+      if (result.success) {
+        setFormStatus({ type: 'success', message: contactConfig.form.successMessage })
+        // Reset form
+        const form = document.querySelector('form') as HTMLFormElement
+        form?.reset()
+      } else {
+        setFormStatus({ type: 'error', message: result.message || 'Something went wrong. Please try again.' })
+      }
     })
   }
 

@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 import { motion } from "framer-motion"
-// import { sendConsultancyEmail } from "@/actions/consultancy"
+import { sendConsultancyEmail } from "@/actions/consultancy"
 import { ArrowRight, CheckCircle2, Loader2, Send } from "lucide-react"
 
 export function ConsultancyForm({ serviceName }: { serviceName: string }) {
@@ -18,12 +18,14 @@ export function ConsultancyForm({ serviceName }: { serviceName: string }) {
     }
 
     try {
-      // Simulate network request
-      await new Promise(resolve => setTimeout(resolve, 1000))
-      console.log('Form submitted:', Object.fromEntries(formData))
-
-      setStatus("success")
-      setMessage("Request sent successfully!")
+      const result = await sendConsultancyEmail(formData)
+      if (result.success) {
+        setStatus("success")
+        setMessage(result.message || "Request sent successfully!")
+      } else {
+        setStatus("error")
+        setMessage(result.message || "Something went wrong.")
+      }
     } catch (error) {
       setStatus("error")
       setMessage("An unexpected error occurred.")

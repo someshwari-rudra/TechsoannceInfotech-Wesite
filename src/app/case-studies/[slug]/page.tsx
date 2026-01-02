@@ -211,13 +211,6 @@ const caseStudiesData = {
 
 type Slug = keyof typeof caseStudiesData
 
-// Generate static params for static export
-export async function generateStaticParams() {
-  return Object.keys(caseStudiesData).map((slug) => ({
-    slug,
-  }))
-}
-
 export default async function CaseStudyPage({ params }: { params: Promise<{ slug: string }> }) {
   const resolvedParams = await params
   const slug = resolvedParams.slug as Slug
